@@ -1,3 +1,6 @@
+
+![zel22](https://github.com/user-attachments/assets/602e1bcf-ac7f-4ac8-bc38-6c27bfea729c)
+
 LinkinCRT is the latest version with optimised options + a couple features added
 
 CRT shader post process for dolphin emulator.
