@@ -1,5 +1,5 @@
 
-![zel22](https://github.com/user-attachments/assets/602e1bcf-ac7f-4ac8-bc38-6c27bfea729c)
+![zel22](https://github.com/user-attachments/assets/ae15889a-a25e-424c-b4eb-41f97778c40b)
 
 LinkinCRT is the latest version with optimised options + a couple features added
 
