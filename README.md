@@ -1,7 +1,9 @@
 
 ![zel22](https://github.com/user-attachments/assets/ae15889a-a25e-424c-b4eb-41f97778c40b)
 
-LinkinCRT_Optimised.glsl is the latest version with optimised options + a couple features added
+LinkinCRT_Optimised.glsl is the latest version
+^ Purely to optimise some code to make it run faster(by faster i mean at best 1%), may help for higher IR or any other settings to try make dolphin more accuracte (i've only tested default settings)
+Possibly will help if running on the android version.
 
 CRT shader post process for dolphin emulator.
 
