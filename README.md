@@ -1,7 +1,7 @@
 
 ![zel22](https://github.com/user-attachments/assets/ae15889a-a25e-424c-b4eb-41f97778c40b)
 
-LinkinCRT is the latest version with optimised options + a couple features added
+LinkinCRT_Optimised.glsl is the latest version with optimised options + a couple features added
 
 CRT shader post process for dolphin emulator.
 
