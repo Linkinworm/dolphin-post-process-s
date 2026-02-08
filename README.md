@@ -9,11 +9,10 @@ CRT shader post process for dolphin emulator.
 
 Works with Vulkan only, untested with DX11 or DX12. will fail to compile if you use openGL (sorry i dont think its possible to make an AIO version)
 
-Personal preferences are in the image uploaded, so copy these as a base if the options look overwhelimg!
-you should only need to change these 2 settings below in dolphin to have these base values look correct for a 1080p monitor.
-other values will mean messing with mainly the Base mask size option, but other values will need editing if you change this.
+Check Linkincrtnative.jpg for personal preference. this should load as the default values set. If you want the ultimate retro look (no upscaling or fancy enhancements)
+if you use higher IR, make sure to change option 13, Base mask size
 
-Backend > Vulkan
-IR = x3 (1080p)
+Everything should be self explanitory. options are ordered in how they stack on each other and as such some options will only work when enabling other options
+this is mainly limited to option 16,19 and 20 though.(in that order)
 
 Also works on the android version, should my commit changes get merged into the master branch at some point! :D
