@@ -1,15 +1,15 @@
 
 ![zel22](https://github.com/user-attachments/assets/ae15889a-a25e-424c-b4eb-41f97778c40b)
 
-LinkinCRT_Optimised.glsl is the latest version
-^ Purely to optimise some code to make it run faster(by faster i mean at best 1%), may help for higher IR or any other settings to try make dolphin more accuracte (i've only tested default settings)
-Possibly will help if running on the android version.
+LinkinCRTfinal_vulkanONLY.glsl is the latest version
+^ This is optimised for vulkan. but seems to work with OGL <(this is not fully tested though since I feel vulkan is just better)>
+DX11 and DX12 seem to just be fully broken, glitchy effects in this case possibly use an older version. Again i'm not working for DirectX or OGL compatibility as I want to try maintain some performance due to how many effects you can layer (all 70 if you really wanted to).
+
+_____________________________________________
 
 CRT shader post process for dolphin emulator.
 
-Works with Vulkan only, untested with DX11 or DX12. will fail to compile if you use openGL (sorry i dont think its possible to make an AIO version)
-
-Check Linkincrtnative.jpg for personal preference. this should load as the default values set. If you want the ultimate retro look (no upscaling or fancy enhancements)
+Currently it will load some random values. Most should be personal preference but as this has expanded i've not taken care of default values and just wanted values to quickly test so you'll likly want to change everything to 0 / turn off options with the top check boxes and work your way thought it to fine tune everything.
 if you use higher IR, make sure to change option 13, Base mask size
 
 Everything should be self explanitory. options are ordered in how they stack on each other and as such some options will only work when enabling other options
