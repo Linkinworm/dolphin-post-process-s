@@ -1,0 +1,2842 @@
+/*
+[configuration]
+[OptionBool]
+GUIName = [GAME FRAME] Main Modifiers
+OptionName = A_GAMEFRAME
+DefaultValue = true
+
+[OptionBool]
+GUIName = 00. Force 4:3 Game Frame (for 16:9 Dolphin output)
+OptionName = A_00_FORCE_43
+DependentOption = A_GAMEFRAME
+DefaultValue = false
+
+[OptionRangeFloat]
+GUIName = 01. Perceived Resolution (Lo-Fi)
+OptionName = A_01_RES
+DependentOption = A_GAMEFRAME
+MinValue = 120.0
+MaxValue = 1080.0
+StepAmount = 20.0
+DefaultValue = 440.0
+
+[OptionRangeFloat]
+GUIName = 02. Downscale Sharpness
+OptionName = A_02_SHARP
+DependentOption = A_GAMEFRAME
+MinValue = 0.0
+MaxValue = 1.0
+StepAmount = 0.05
+DefaultValue = 0.0
+
+[OptionRangeFloat]
+GUIName = 03. Color Contrast
+OptionName = A_03_CONTRAST
+DependentOption = A_GAMEFRAME
+MinValue = 0.5
+MaxValue = 2.0
+StepAmount = 0.05
+DefaultValue = 1.0
+
+[OptionRangeFloat]
+GUIName = 04. Color Saturation
+OptionName = A_04_SAT
+DependentOption = A_GAMEFRAME
+MinValue = 0.0
+MaxValue = 2.0
+StepAmount = 0.05
+DefaultValue = 1.0
+
+[OptionRangeFloat]
+GUIName = 05. Phosphor Purity (P22 Colors)
+OptionName = A_05_PURITY
+DependentOption = A_GAMEFRAME
+MinValue = 0.0
+MaxValue = 1.0
+StepAmount = 0.05
+DefaultValue = 1.0
+
+[OptionRangeFloat]
+GUIName = 06. Tube Bulge (Curvature)
+OptionName = A_06_BULGE
+DependentOption = A_GAMEFRAME
+MinValue = 0.0
+MaxValue = 0.5
+StepAmount = 0.05
+DefaultValue = 0.0
+
+[OptionRangeFloat]
+GUIName = 07. Tube Pattern (0:Pana, 1:Sony, 2:VGA, 3:ShadowMask, 4:SlotMask)
+OptionName = A_07_MASK_TYPE
+DependentOption = A_GAMEFRAME
+MinValue = 0.0
+MaxValue = 4.0
+StepAmount = 1.0
+DefaultValue = 0.0
+
+[OptionRangeFloat]
+GUIName = 08. Base Mask Size
+OptionName = A_08_MASK_SCALE
+DependentOption = A_GAMEFRAME
+MinValue = 0.5
+MaxValue = 8.0
+StepAmount = 0.1
+DefaultValue = 0.6
+
+
+[OptionRangeFloat]
+GUIName = 09. Global CRT Pattern Strength
+OptionName = A_09_PATTERN_STR
+DependentOption = A_GAMEFRAME
+MinValue = 0.0
+MaxValue = 1.0
+StepAmount = 0.05
+DefaultValue = 0.15
+
+[OptionRangeFloat]
+GUIName = 10. Stagger Intensity (Slot Offset)
+OptionName = A_10_STAGGER
+DependentOption = A_GAMEFRAME
+MinValue = 0.0
+MaxValue = 2.0
+StepAmount = 0.1
+DefaultValue = 2.0
+
+[OptionRangeFloat]
+GUIName = 11. Scanline Darkness
+OptionName = A_11_SCAN_D
+DependentOption = A_GAMEFRAME
+MinValue = 0.0
+MaxValue = 1.0
+StepAmount = 0.05
+DefaultValue = 0.40
+
+[OptionRangeFloat]
+GUIName = 12. Scanline Amount (Density)
+OptionName = A_12_SCAN_AMT
+DependentOption = A_GAMEFRAME
+MinValue = 0.25
+MaxValue = 1.0
+StepAmount = 0.05
+DefaultValue = 1.0
+
+[OptionBool]
+GUIName = 13. Simulate Interlaced Jitter (480i)
+OptionName = A_13_T_INTERLACE
+DependentOption = A_GAMEFRAME
+DefaultValue = false
+
+[OptionRangeFloat]
+GUIName = 14. Interlace Jitter Strength
+OptionName = A_14_JITTER
+DependentOption = A_GAMEFRAME
+MinValue = 0.0
+MaxValue = 1.0
+StepAmount = 0.05
+DefaultValue = 0.20
+
+[OptionRangeFloat]
+GUIName = 15. Beam Spot Halation (Bloom)
+OptionName = A_15_HALATION
+DependentOption = A_GAMEFRAME
+MinValue = 0.0
+MaxValue = 1.0
+StepAmount = 0.05
+DefaultValue = 0.35
+
+[OptionRangeFloat]
+GUIName = 16. Beam Overdrive (White Bloom)
+OptionName = A_16_OVERDRIVE
+DependentOption = A_GAMEFRAME
+MinValue = 0.0
+MaxValue = 1.0
+StepAmount = 0.05
+DefaultValue = 0.0
+
+[OptionRangeFloat]
+GUIName = 17. Signal Ghosting (Ringing)
+OptionName = A_17_GHOST
+DependentOption = A_GAMEFRAME
+MinValue = 0.0
+MaxValue = 1.0
+StepAmount = 0.05
+DefaultValue = 0.85
+
+[OptionRangeFloat]
+GUIName = 18. Chromatic Aberration
+OptionName = A_18_CHROMA
+DependentOption = A_GAMEFRAME
+MinValue = 0.0
+MaxValue = 10.0
+StepAmount = 0.1
+DefaultValue = 1.0
+
+[OptionRangeFloat]
+GUIName = 19. Signal Noise (RF Grain)
+OptionName = A_19_NOISE
+DependentOption = A_GAMEFRAME
+MinValue = 0.0
+MaxValue = 0.5
+StepAmount = 0.01
+DefaultValue = 0.0
+
+[OptionRangeFloat]
+GUIName = 20. 60Hz Hum Bar (Interference)
+OptionName = A_20_HUM
+DependentOption = A_GAMEFRAME
+MinValue = 0.0
+MaxValue = 0.5
+StepAmount = 0.01
+DefaultValue = 0.0
+
+[OptionRangeFloat]
+GUIName = 21. Moire Morph Intensity
+OptionName = A_21_SHIVER
+DependentOption = A_GAMEFRAME
+MinValue = 0.0
+MaxValue = 1.0
+StepAmount = 0.05
+DefaultValue = 0.70
+
+[OptionRangeFloat]
+GUIName = 22. Morph Smoothness (Temporal Lag)
+OptionName = A_22_SMOOTH
+DependentOption = A_GAMEFRAME
+MinValue = 0.0
+MaxValue = 1.0
+StepAmount = 0.05
+DefaultValue = 0.50
+
+[OptionRangeFloat]
+GUIName = 23. Moire Blocking Size(Grid)(1:Global)
+OptionName = A_23_BLOCK
+DependentOption = A_GAMEFRAME
+MinValue = 1.0
+MaxValue = 32.0
+StepAmount = 1.0
+DefaultValue = 1.0
+
+[OptionRangeInteger]
+GUIName = 24. Temporal Smoothing (0-4 frames)
+OptionName = A_24_T_SMOOTH
+DependentOption = A_GAMEFRAME
+MinValue = 0
+MaxValue = 4
+StepAmount = 1
+DefaultValue = 0
+
+[OptionRangeFloat]
+GUIName = 25. Ambient Glow (Adaptive)
+OptionName = A_25_GLOW
+DependentOption = A_GAMEFRAME
+MinValue = 0.0
+MaxValue = 1.0
+StepAmount = 0.05
+DefaultValue = 0.2
+
+[OptionRangeFloat]
+GUIName = 26. Black Level Lift
+OptionName = A_26_BLACK
+DependentOption = A_GAMEFRAME
+MinValue = -0.1
+MaxValue = 0.2
+StepAmount = 0.01
+DefaultValue = 0.0
+
+[OptionRangeFloat]
+GUIName = 27. Brightness Master
+OptionName = A_27_INTENS
+DependentOption = A_GAMEFRAME
+MinValue = 1.0
+MaxValue = 3.0
+StepAmount = 0.05
+DefaultValue = 1.8
+
+[OptionRangeFloat]
+GUIName = 28. Display Gamma Correction
+OptionName = A_28_GAMMA
+DependentOption = A_GAMEFRAME
+MinValue = 1.8
+MaxValue = 2.6
+StepAmount = 0.05
+DefaultValue = 2.2
+
+[OptionRangeFloat]
+GUIName = 29. Overscan Crop
+OptionName = A_29_CROP
+DependentOption = A_GAMEFRAME
+MinValue = 0.0
+MaxValue = 0.1
+StepAmount = 0.005
+DefaultValue = 0.0
+
+[OptionRangeFloat]
+GUIName = 30. Soft Blur (Post-Phosphor)
+OptionName = A_30_SOFT_BLUR
+DependentOption = A_GAMEFRAME
+MinValue = 0.0
+MaxValue = 2.0
+StepAmount = 0.1
+DefaultValue = 0.0
+
+[OptionRangeFloat]
+GUIName = 31. Colour Temperature (0:Warm 6500K, 1:Neutral, 2:Cool 9300K)
+OptionName = A_31_TEMP
+DependentOption = A_GAMEFRAME
+MinValue = 0.0
+MaxValue = 2.0
+StepAmount = 0.1
+DefaultValue = 1.5
+
+[OptionRangeFloat]
+GUIName = 32. Phosphor Decay (Green/Blue Persistence)
+OptionName = A_32_DECAY
+DependentOption = A_GAMEFRAME
+MinValue = 0.0
+MaxValue = 1.0
+StepAmount = 0.05
+DefaultValue = 0.0
+
+[OptionBool]
+GUIName = [TV BEZEL] Enable Bezel
+OptionName = B_BEZEL
+DefaultValue = true
+
+[OptionRangeFloat]
+GUIName = 01. Corner Roundness
+OptionName = B_01_CORNER_R
+DependentOption = B_BEZEL
+MinValue = 0.0
+MaxValue = 0.05
+StepAmount = 0.01
+DefaultValue = 0.04
+
+[OptionRangeFloat]
+GUIName = 02. Bezel Border Size
+OptionName = B_02_BORDER
+DependentOption = B_BEZEL
+MinValue = 0.0
+MaxValue = 0.2
+StepAmount = 0.01
+DefaultValue = 0.02
+
+[OptionRangeFloat]
+GUIName = 03. Bezel Grain
+OptionName = B_03_BEZEL_GRAIN
+DependentOption = B_BEZEL
+MinValue = 0.0
+MaxValue = 0.3
+StepAmount = 0.01
+DefaultValue = 0.08
+
+[OptionRangeFloat]
+GUIName = 04. Bezel Color (0:Grey, 1:Red, 2:Tan, 3:LGrey, 4:Black)
+OptionName = B_04_BEZEL_COL
+DependentOption = B_BEZEL
+MinValue = 0.0
+MaxValue = 4.0
+StepAmount = 1.0
+DefaultValue = 0.0
+
+[OptionRangeFloat]
+GUIName = 05. Bezel Shadow onto Screen
+OptionName = B_05_BEZEL_SHADOW
+DependentOption = B_BEZEL
+MinValue = 0.0
+MaxValue = 1.0
+StepAmount = 0.05
+DefaultValue = 0.30
+
+[OptionRangeFloat]
+GUIName = 06. Bezel Reflection Blur (0:Sharp, 1:Med, 2:High)
+OptionName = B_06_BEZEL_REFLECT_BLUR
+DependentOption = B_BEZEL
+MinValue = 0.0
+MaxValue = 2.0
+StepAmount = 1.0
+DefaultValue = 1.0
+
+[OptionRangeFloat]
+GUIName = 07. Inner Black Frame Size
+OptionName = B_07_FRAME
+DependentOption = B_BEZEL
+MinValue = 0.0
+MaxValue = 0.05
+StepAmount = 0.005
+DefaultValue = 0.01
+
+[OptionBool]
+GUIName = [ENHANCED FX] Enable Additional Effects
+OptionName = M_MISC
+DefaultValue = true
+
+[OptionRangeFloat]
+GUIName = 01. H-Sync Glitch (Tracking Error)
+OptionName = M_01_SYNC
+DependentOption = M_MISC
+MinValue = 0.0
+MaxValue = 1.0
+StepAmount = 0.1
+DefaultValue = 0.0
+
+[OptionRangeFloat]
+GUIName = 02. Rainbow Banding (Dot Crawl)
+OptionName = M_02_RAINBOW
+DependentOption = M_MISC
+MinValue = 0.0
+MaxValue = 1.0
+StepAmount = 0.1
+DefaultValue = 0.0
+
+[OptionRangeFloat]
+GUIName = 03. Beam Focus (Blur)
+OptionName = M_03_FOCUS
+DependentOption = M_MISC
+MinValue = 0.0
+MaxValue = 2.0
+StepAmount = 0.1
+DefaultValue = 0.0
+
+[OptionRangeFloat]
+GUIName = 04. Geometry Pincushion
+OptionName = M_04_GEOM
+DependentOption = M_MISC
+MinValue = 0.0
+MaxValue = 1.0
+StepAmount = 0.1
+DefaultValue = 0.0
+
+[OptionRangeFloat]
+GUIName = 05. Breathing Effect (Tube Swell)
+OptionName = M_05_BREATH
+DependentOption = M_MISC
+MinValue = 0.0
+MaxValue = 1.0
+StepAmount = 0.1
+DefaultValue = 0.0
+
+[OptionRangeFloat]
+GUIName = 06. Snow Static (Dead Channel)
+OptionName = M_06_SNOW
+DependentOption = M_MISC
+MinValue = 0.0
+MaxValue = 1.0
+StepAmount = 0.1
+DefaultValue = 0.0
+
+[OptionRangeFloat]
+GUIName = 07. Blue Scatter (Lens Flare)
+OptionName = M_07_SCATTER
+DependentOption = M_MISC
+MinValue = 0.0
+MaxValue = 1.0
+StepAmount = 0.1
+DefaultValue = 0.0
+
+[OptionRangeFloat]
+GUIName = 08. Phosphorus Afterglow (Persistence)
+OptionName = M_08_AFTERGLOW
+DependentOption = M_MISC
+MinValue = 0.0
+MaxValue = 1.0
+StepAmount = 0.1
+DefaultValue = 0.3
+
+[OptionRangeFloat]
+GUIName = 09. Magnetic Purity Failure (Tint)
+OptionName = M_09_MAG_TINT
+DependentOption = M_MISC
+MinValue = 0.0
+MaxValue = 1.0
+StepAmount = 0.1
+DefaultValue = 0.4
+
+[OptionRangeFloat]
+GUIName = 10. Corner Convergence Error
+OptionName = M_10_CONVERGE
+DependentOption = M_MISC
+MinValue = 0.0
+MaxValue = 2.0
+StepAmount = 0.1
+DefaultValue = 1.0
+
+[OptionRangeFloat]
+GUIName = 11. Dynamic Beam Bloom
+OptionName = M_11_BEAM_BLOOM
+DependentOption = M_MISC
+MinValue = 0.0
+MaxValue = 1.0
+StepAmount = 0.1
+DefaultValue = 0.5
+
+[OptionRangeFloat]
+GUIName = 12. Peripheral Vignette
+OptionName = M_12_VIGNETTE
+DependentOption = M_MISC
+MinValue = 0.0
+MaxValue = 1.0
+StepAmount = 0.1
+DefaultValue = 0.4
+
+[OptionRangeFloat]
+GUIName = 13. Phosphor Flicker (60Hz)
+OptionName = M_13_FLICKER
+DependentOption = M_MISC
+MinValue = 0.0
+MaxValue = 1.0
+StepAmount = 0.1
+DefaultValue = 0.2
+
+[OptionRangeFloat]
+GUIName = 14. Vertical Hold Instability
+OptionName = M_14_VHOLD
+DependentOption = M_MISC
+MinValue = 0.0
+MaxValue = 1.0
+StepAmount = 0.05
+DefaultValue = 0.0
+
+[OptionRangeFloat]
+GUIName = 15. V-Hold Roll Speed
+OptionName = M_15_VHOLD_SPEED
+DependentOption = M_MISC
+MinValue = 0.1
+MaxValue = 4.0
+StepAmount = 0.1
+DefaultValue = 0.5
+
+[OptionRangeFloat]
+GUIName = 16. Edge Ringing (NTSC Luma Overshoot)
+OptionName = M_16_EDGE_RING
+DependentOption = M_MISC
+MinValue = 0.0
+MaxValue = 1.0
+StepAmount = 0.05
+DefaultValue = 0.0
+
+[OptionBool]
+GUIName = [TUBE GLASS] Enable Glass Effects
+OptionName = T_TUBEGLASS
+DefaultValue = true
+
+[OptionRangeFloat]
+GUIName = 01. Glass Refraction (Distortion)
+OptionName = T_01_REFRACT
+DependentOption = T_TUBEGLASS
+MinValue = 0.0
+MaxValue = 1.0
+StepAmount = 0.05
+DefaultValue = 0.15
+
+[OptionRangeFloat]
+GUIName = 02. Reflection Brightness
+OptionName = T_02_SHINE
+DependentOption = T_TUBEGLASS
+MinValue = 0.0
+MaxValue = 2.0
+StepAmount = 0.05
+DefaultValue = 0.50
+
+[OptionRangeFloat]
+GUIName = 03. Reflection Style (0:Diff, 1:Spot, 2:Bar)
+OptionName = T_03_R_TYPE
+DependentOption = T_TUBEGLASS
+MinValue = 0.0
+MaxValue = 2.0
+StepAmount = 1.0
+DefaultValue = 0.0
+
+[OptionRangeFloat]
+GUIName = 04. Glass Scratches & Wear
+OptionName = T_04_WEAR
+DependentOption = T_TUBEGLASS
+MinValue = 0.0
+MaxValue = 1.0
+StepAmount = 0.1
+DefaultValue = 0.3
+
+[OptionRangeFloat]
+GUIName = 05. Reflection Position X
+OptionName = T_05_POS_X
+DependentOption = T_TUBEGLASS
+MinValue = -0.5
+MaxValue = 0.5
+StepAmount = 0.01
+DefaultValue = 0.0
+
+[OptionRangeFloat]
+GUIName = 06. Reflection Position Y
+OptionName = T_06_POS_Y
+DependentOption = T_TUBEGLASS
+MinValue = -0.5
+MaxValue = 0.5
+StepAmount = 0.01
+DefaultValue = 0.0
+
+[OptionRangeFloat]
+GUIName = 07. Inner Glass Tint (0:None, 1:Grey, 2:Green, 3:Blue)
+OptionName = T_07_TINT
+DependentOption = T_TUBEGLASS
+MinValue = 0.0
+MaxValue = 3.0
+StepAmount = 1.0
+DefaultValue = 1.0
+
+[OptionRangeFloat]
+GUIName = 08. Glass Tint Strength
+OptionName = T_08_TINT_STR
+DependentOption = T_TUBEGLASS
+MinValue = 0.0
+MaxValue = 1.0
+StepAmount = 0.05
+DefaultValue = 0.15
+
+[OptionRangeFloat]
+GUIName = 09. Screen Dust & Smudge
+OptionName = T_09_DUST
+DependentOption = T_TUBEGLASS
+MinValue = 0.0
+MaxValue = 1.0
+StepAmount = 0.05
+DefaultValue = 0.0
+
+[/configuration]
+*/
+
+#define PI        3.14159265
+#define LUMA_R    0.299
+#define LUMA_G    0.587
+#define LUMA_B    0.114
+#define INV_LUMA  (1.0 / (LUMA_R + LUMA_G + LUMA_B))
+
+// ___________________________________________________________________________
+// Signed-distance helper
+// ___________________________________________________________________________
+float getSDist(float2 warpedUV, float cornerR, float inset)
+{
+    float2 q = abs(warpedUV - 0.5) - (0.5 - inset) + cornerR;
+    return length(max(q, 0.0)) + min(max(q.x, q.y), 0.0) - cornerR;
+}
+
+// Asymmetric signed-distance: separate insets per axis (for 4:3 pillarbox)
+float getSDistXY(float2 warpedUV, float cornerR, float insetX, float insetY)
+{
+    float2 q = abs(warpedUV - 0.5) - float2(0.5 - insetX, 0.5 - insetY) + cornerR;
+    return length(max(q, 0.0)) + min(max(q.x, q.y), 0.0) - cornerR;
+}
+
+// ___________________________________________________________________________
+// Low-cost hash
+// ___________________________________________________________________________
+float hash(float2 p)
+{
+    return fract(sin(dot(p, float2(12.9898, 78.233))) * 43758.5453);
+}
+
+// ___________________________________________________________________________
+// Bezel colour lookup
+// ___________________________________________________________________________
+float3 bezelColor(int idx)
+{
+    // 0:Red  1:Tan  2:Grey  3:Black  4:DarkBlue(default)
+    if (idx == 0) return float3(0.25, 0.02, 0.02);
+    if (idx == 1) return float3(0.25, 0.22, 0.02);
+    if (idx == 2) return float3(0.18, 0.18, 0.18);
+    if (idx == 3) return float3(0.05, 0.05, 0.05);
+                  return float3(0.08, 0.09, 0.10);
+}
+
+// *** EMBEDDED BEZEL IMAGE DATA (256x144, 128 colours) ***
+// ==========================================================================
+// EMBEDDED BEZEL IMAGE DATA
+// Generated by bezel_encoder.py
+// Resolution : 256 x 144
+// Colours    : 128
+// Packed uints: 9216
+// ==========================================================================
+
+#define BEZEL_W      256
+#define BEZEL_H      144
+#define BEZEL_COLS   128
+#define BEZEL_PACKED 9216
+
+// Colour palette (RGB)
+float3 bezelPalette[BEZEL_COLS] = float3[BEZEL_COLS](
+    float3(1.0000, 1.0000, 1.0000),
+    float3(1.0000, 1.0000, 0.0000),
+    float3(0.8431, 0.8392, 0.8235),
+    float3(0.6706, 0.6784, 0.6706),
+    float3(0.6353, 0.6314, 0.6235),
+    float3(0.6157, 0.6078, 0.6000),
+    float3(0.6078, 0.5882, 0.5843),
+    float3(0.5843, 0.5843, 0.5765),
+    float3(0.5765, 0.5725, 0.5647),
+    float3(0.5843, 0.5608, 0.5569),
+    float3(0.5647, 0.5647, 0.5569),
+    float3(0.5608, 0.5608, 0.5529),
+    float3(0.5490, 0.5529, 0.5451),
+    float3(0.5412, 0.5412, 0.5412),
+    float3(0.5451, 0.5333, 0.5294),
+    float3(0.5216, 0.5255, 0.5255),
+    float3(0.5333, 0.5176, 0.4235),
+    float3(0.5294, 0.4941, 0.4902),
+    float3(0.4863, 0.4824, 0.4784),
+    float3(0.4824, 0.4745, 0.3843),
+    float3(0.5059, 0.4824, 0.1176),
+    float3(0.4824, 0.4471, 0.4431),
+    float3(0.4549, 0.4471, 0.1765),
+    float3(0.4784, 0.4118, 0.2941),
+    float3(0.5059, 0.3451, 0.3412),
+    float3(0.4039, 0.4039, 0.3843),
+    float3(0.4078, 0.4000, 0.1294),
+    float3(0.3765, 0.3686, 0.3608),
+    float3(0.3922, 0.3686, 0.1333),
+    float3(0.3529, 0.3490, 0.3490),
+    float3(0.3451, 0.3412, 0.2157),
+    float3(0.3176, 0.3216, 0.3255),
+    float3(0.3098, 0.3216, 0.2471),
+    float3(0.4549, 0.2745, 0.2706),
+    float3(0.3020, 0.2980, 0.2784),
+    float3(0.2902, 0.2902, 0.2667),
+    float3(0.2824, 0.2745, 0.2588),
+    float3(0.2667, 0.2706, 0.2941),
+    float3(0.2549, 0.2549, 0.2745),
+    float3(0.2510, 0.2667, 0.1333),
+    float3(0.2471, 0.2471, 0.2196),
+    float3(0.4549, 0.2275, 0.2235),
+    float3(0.4392, 0.2000, 0.1961),
+    float3(0.4314, 0.1725, 0.1725),
+    float3(0.4353, 0.1529, 0.1529),
+    float3(0.2392, 0.2353, 0.2314),
+    float3(0.3373, 0.1843, 0.2078),
+    float3(0.2275, 0.2275, 0.2353),
+    float3(0.2235, 0.2118, 0.2235),
+    float3(0.1882, 0.2353, 0.3843),
+    float3(0.1765, 0.2039, 0.3255),
+    float3(0.2039, 0.2235, 0.1843),
+    float3(0.2039, 0.2039, 0.2000),
+    float3(0.2000, 0.1922, 0.2471),
+    float3(0.1882, 0.1843, 0.1765),
+    float3(0.1725, 0.1882, 0.2824),
+    float3(0.1255, 0.1882, 0.3059),
+    float3(0.1804, 0.1686, 0.2902),
+    float3(0.1725, 0.1647, 0.2235),
+    float3(0.1725, 0.1686, 0.1647),
+    float3(0.1608, 0.1529, 0.1529),
+    float3(0.1412, 0.1647, 0.2745),
+    float3(0.1451, 0.1569, 0.1882),
+    float3(0.0980, 0.1608, 0.3059),
+    float3(0.0941, 0.1569, 0.2039),
+    float3(0.4275, 0.1333, 0.1333),
+    float3(0.4157, 0.1137, 0.1176),
+    float3(0.3922, 0.1255, 0.1255),
+    float3(0.3882, 0.1020, 0.1020),
+    float3(0.3843, 0.0863, 0.0902),
+    float3(0.3647, 0.0863, 0.0863),
+    float3(0.3725, 0.0745, 0.0784),
+    float3(0.3608, 0.0588, 0.0588),
+    float3(0.1529, 0.1333, 0.2627),
+    float3(0.1412, 0.1333, 0.1725),
+    float3(0.1373, 0.1373, 0.1255),
+    float3(0.1294, 0.1255, 0.1137),
+    float3(0.2784, 0.0745, 0.1294),
+    float3(0.1373, 0.1098, 0.2196),
+    float3(0.1255, 0.1059, 0.1765),
+    float3(0.1059, 0.1216, 0.2196),
+    float3(0.1098, 0.1137, 0.1216),
+    float3(0.1059, 0.1059, 0.0980),
+    float3(0.0980, 0.0980, 0.0980),
+    float3(0.0941, 0.0941, 0.0941),
+    float3(0.1020, 0.0980, 0.0863),
+    float3(0.0941, 0.0902, 0.0824),
+    float3(0.0902, 0.0902, 0.0902),
+    float3(0.0902, 0.0902, 0.0784),
+    float3(0.0863, 0.0902, 0.0863),
+    float3(0.1020, 0.0745, 0.1843),
+    float3(0.0863, 0.0863, 0.0863),
+    float3(0.0902, 0.0863, 0.0745),
+    float3(0.0549, 0.1294, 0.2039),
+    float3(0.0510, 0.1059, 0.1529),
+    float3(0.0824, 0.0824, 0.0784),
+    float3(0.0431, 0.0824, 0.1216),
+    float3(0.0745, 0.0706, 0.0824),
+    float3(0.0667, 0.0627, 0.0549),
+    float3(0.0471, 0.0627, 0.0706),
+    float3(0.0118, 0.0627, 0.0863),
+    float3(0.0510, 0.0510, 0.0549),
+    float3(0.0549, 0.0549, 0.0471),
+    float3(0.0510, 0.0471, 0.0471),
+    float3(0.0471, 0.0471, 0.0471),
+    float3(0.0510, 0.0471, 0.0392),
+    float3(0.0314, 0.0431, 0.0549),
+    float3(0.0078, 0.0471, 0.0627),
+    float3(0.0314, 0.0314, 0.0353),
+    float3(0.0235, 0.0235, 0.0275),
+    float3(0.0235, 0.0235, 0.0196),
+    float3(0.0157, 0.0157, 0.0314),
+    float3(0.0235, 0.0157, 0.0157),
+    float3(0.0157, 0.0157, 0.0157),
+    float3(0.0196, 0.0157, 0.0118),
+    float3(0.0078, 0.0235, 0.0431),
+    float3(0.0118, 0.0118, 0.0235),
+    float3(0.0118, 0.0118, 0.0118),
+    float3(0.0157, 0.0118, 0.0078),
+    float3(0.0039, 0.0118, 0.0235),
+    float3(0.0118, 0.0078, 0.0078),
+    float3(0.0078, 0.0078, 0.0118),
+    float3(0.0078, 0.0078, 0.0078),
+    float3(0.0078, 0.0039, 0.0275),
+    float3(0.0118, 0.0078, 0.0039),
+    float3(0.0039, 0.0039, 0.0039),
+    float3(0.8314, 0.0000, 0.0000),
+    float3(0.0000, 0.0000, 0.0000)
+);
+
+// Alpha palette (one entry per colour)
+float bezelAlpha[BEZEL_COLS] = float[BEZEL_COLS](
+    0.0314,
+    0.0039,
+    0.3725,
+    0.8863,
+    0.9216,
+    0.9490,
+    0.9922,
+    0.9647,
+    0.9961,
+    0.9216,
+    0.9961,
+    0.9922,
+    0.9961,
+    1.0000,
+    0.9922,
+    0.9922,
+    1.0000,
+    0.9647,
+    0.9333,
+    0.0667,
+    1.0000,
+    0.9922,
+    1.0000,
+    1.0000,
+    1.0000,
+    0.9020,
+    1.0000,
+    0.9882,
+    1.0000,
+    0.7725,
+    1.0000,
+    0.9843,
+    1.0000,
+    1.0000,
+    0.9059,
+    0.9137,
+    0.9765,
+    1.0000,
+    0.9882,
+    1.0000,
+    0.9961,
+    1.0000,
+    1.0000,
+    1.0000,
+    1.0000,
+    0.9137,
+    0.0000,
+    0.9922,
+    0.9922,
+    1.0000,
+    1.0000,
+    0.9490,
+    0.9882,
+    1.0000,
+    0.8745,
+    1.0000,
+    1.0000,
+    1.0000,
+    1.0000,
+    0.9922,
+    0.9882,
+    1.0000,
+    1.0000,
+    1.0000,
+    1.0000,
+    1.0000,
+    1.0000,
+    1.0000,
+    1.0000,
+    1.0000,
+    1.0000,
+    1.0000,
+    1.0000,
+    1.0000,
+    1.0000,
+    0.9882,
+    0.9922,
+    0.0000,
+    1.0000,
+    1.0000,
+    1.0000,
+    0.7490,
+    0.9529,
+    0.8980,
+    0.9922,
+    0.9490,
+    0.9961,
+    0.9608,
+    1.0000,
+    0.9804,
+    1.0000,
+    0.9529,
+    0.9961,
+    1.0000,
+    1.0000,
+    0.9412,
+    1.0000,
+    0.9961,
+    0.8314,
+    1.0000,
+    1.0000,
+    0.9961,
+    0.9922,
+    1.0000,
+    0.9961,
+    0.9922,
+    1.0000,
+    1.0000,
+    0.9882,
+    0.9882,
+    0.9922,
+    1.0000,
+    0.9961,
+    0.9961,
+    1.0000,
+    1.0000,
+    1.0000,
+    0.9961,
+    1.0000,
+    1.0000,
+    1.0000,
+    1.0000,
+    1.0000,
+    1.0000,
+    1.0000,
+    0.4431,
+    0.0039,
+    0.0000
+);
+
+// Packed pixel indices: 4 × 8-bit indices per uint, row-major
+uint bezelData[BEZEL_PACKED] = uint[BEZEL_PACKED](
+    0x7D7A7D7Du, 0x7D7D7A7Du, 0x7A7A7A7Du, 0x7A7A757Du, 0x7A7A7A7Au, 0x75757A7Au, 0x7A7A7575u, 0x7F6E7A7Du,
+    0x5F3C1D36u, 0x756E6C62u, 0x75717171u, 0x71757575u, 0x71757575u, 0x71757175u, 0x75757571u, 0x71717575u,
+    0x75757175u, 0x71717571u, 0x71757571u, 0x75757175u, 0x71717575u, 0x75757571u, 0x75717575u, 0x71757575u,
+    0x75757571u, 0x71757575u, 0x71717171u, 0x71757575u, 0x75717175u, 0x71717571u, 0x75757575u, 0x75717175u,
+    0x71757575u, 0x71757575u, 0x75717571u, 0x75757571u, 0x71717575u, 0x75757175u, 0x71757171u, 0x71757571u,
+    0x75757175u, 0x71717575u, 0x75757171u, 0x75717575u, 0x71757575u, 0x75757571u, 0x75757575u, 0x71717171u,
+    0x71757575u, 0x75717175u, 0x71757175u, 0x75757575u, 0x75717175u, 0x71757575u, 0x626C6D71u, 0x3B1D3C5Fu,
+    0x7D7A717Fu, 0x71757A7Au, 0x71716E6Eu, 0x71717171u, 0x756E7171u, 0x75717171u, 0x75717575u, 0x7D7D7A75u,
+    0x7F7F7D7Du, 0x7D7D7D7Du, 0x7D7D7C7Du, 0x7D7A7A7Au, 0x7A7D7A7Du, 0x7A7A7A7Au, 0x7A7A7F7Du, 0x7F6E7A7Au,
+    0x3B1F1B3Cu, 0x716C655Fu, 0x7A7A7A7Du, 0x7A757575u, 0x7A7A7575u, 0x7A7A7A75u, 0x75757A7Au, 0x7A7A757Au,
+    0x7575757Au, 0x75757A7Au, 0x7A7A7A7Au, 0x757A7A7Au, 0x7A757A7Au, 0x7A75757Au, 0x757A757Au, 0x7A7A757Au,
+    0x7A7A7A7Au, 0x75757A75u, 0x757A7A7Au, 0x7A757575u, 0x7A7A7A75u, 0x7A7A7A7Au, 0x7A75757Au, 0x7A7A7A75u,
+    0x7A757575u, 0x7A7A7575u, 0x7A7A757Au, 0x75757A7Au, 0x7A7A757Au, 0x757A757Au, 0x757A7A75u, 0x7A7A7A7Au,
+    0x757A7A7Au, 0x75757A7Au, 0x7A757A7Au, 0x7A7A757Au, 0x7A7A757Au, 0x7A7A7A7Au, 0x757A7575u, 0x757A7A7Au,
+    0x7A75757Au, 0x7A7A7A75u, 0x7A7A7A7Au, 0x7A75757Au, 0x7A7A7A75u, 0x7A757575u, 0x5F656C71u, 0x3C1B1F3Bu,
+    0x7A7A6E7Fu, 0x7F7F7A7Au, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7D7D7F7Fu,
+    0x61687D7Du, 0x62656365u, 0x62636262u, 0x61626262u, 0x62626261u, 0x62626262u, 0x757A5F53u, 0x7A757575u,
+    0x2D1D265Fu, 0x6154513Bu, 0x68686862u, 0x68656565u, 0x68686568u, 0x65686868u, 0x68686865u, 0x65686868u,
+    0x68686868u, 0x68656868u, 0x68686868u, 0x68686565u, 0x68686868u, 0x65686568u, 0x65686868u, 0x68686868u,
+    0x68686568u, 0x68686868u, 0x68686868u, 0x68686565u, 0x68686865u, 0x68656868u, 0x68686868u, 0x68686868u,
+    0x68656568u, 0x68686568u, 0x65686868u, 0x68686865u, 0x65686868u, 0x68656865u, 0x68656868u, 0x68686868u,
+    0x68656565u, 0x65686868u, 0x65686868u, 0x65686568u, 0x68686868u, 0x68656568u, 0x68686868u, 0x68686868u,
+    0x68686565u, 0x68686865u, 0x65656868u, 0x68686868u, 0x68686868u, 0x62656568u, 0x3B4C5361u, 0x5F261B24u,
+    0x7575757Au, 0x2D517D75u, 0x2F2F2F2Fu, 0x2F2F2F2Fu, 0x2F2F2F2Fu, 0x2F2F2F2Fu, 0x2F2F2F2Fu, 0x7A7F6230u,
+    0x6F617D7Au, 0x6A65776Fu, 0x6F6F6F6Fu, 0x6C74746Fu, 0x6C71716Cu, 0x7171716Du, 0x7A6E5B6Cu, 0x7175757Au,
+    0x1F344B65u, 0x3C362D1Fu, 0x5754524Bu, 0x57545757u, 0x57575757u, 0x57575754u, 0x5B5B5757u, 0x54575457u,
+    0x54575754u, 0x57575754u, 0x57575457u, 0x5B575757u, 0x5757575Bu, 0x57575457u, 0x57575453u, 0x57545757u,
+    0x57575757u, 0x545B5B5Bu, 0x57575757u, 0x57545457u, 0x54575757u, 0x5B575757u, 0x5B5B5B57u, 0x54545754u,
+    0x57545757u, 0x57575757u, 0x57575754u, 0x5B5B5757u, 0x5757545Bu, 0x54575754u, 0x57575754u, 0x57575457u,
+    0x5F575757u, 0x57575B5Bu, 0x57575457u, 0x57575454u, 0x54545757u, 0x57575757u, 0x575B5B5Bu, 0x57545757u,
+    0x57545457u, 0x54575757u, 0x57545757u, 0x5B5B5B57u, 0x54575757u, 0x3C515757u, 0x1F26343Bu, 0x654C221Fu,
+    0x7A757571u, 0x081D7F71u, 0x0E0E0E0Eu, 0x0E0E0E0Eu, 0x0E0E0E0Eu, 0x0E0E0E0Eu, 0x0E0E0E0Eu, 0x717F300Au,
+    0x73617D7Du, 0x6F6C7B6Fu, 0x7377736Fu, 0x776F6F73u, 0x746F6F74u, 0x6E717171u, 0x7A6D627Du, 0x7175757Au,
+    0x224B6168u, 0x34261F1Du, 0x57514B3Cu, 0x57575B57u, 0x5B5B5B57u, 0x57575B57u, 0x5B5B5B5Bu, 0x5B5B5B5Bu,
+    0x57575757u, 0x57575B57u, 0x5B5B575Bu, 0x5B5B5B5Bu, 0x5F5F5B5Fu, 0x5B575B5Bu, 0x5B5B5757u, 0x5B5B5B5Bu,
+    0x5B5B5B5Bu, 0x5F5B5F5Bu, 0x57575B5Bu, 0x57575757u, 0x575B5757u, 0x5B5B5B57u, 0x5B5B5B5Bu, 0x575B5B5Bu,
+    0x57575B57u, 0x5B575757u, 0x57575B57u, 0x5B5B5B57u, 0x5B5B5B5Bu, 0x57575757u, 0x5B5B5B57u, 0x5B5B5B5Bu,
+    0x5B5B5B5Bu, 0x5F5F5B5Fu, 0x5B575B5Bu, 0x5B5B5757u, 0x5B575B57u, 0x575B5B5Bu, 0x5B5B5B5Bu, 0x57575B5Bu,
+    0x57575757u, 0x575B5757u, 0x5B5B5B57u, 0x5B5B5B5Bu, 0x5B5B5F5Bu, 0x3B4B5154u, 0x1F1F2634u, 0x68622D22u,
+    0x7A757571u, 0x0F1D7F71u, 0x0F0F0F12u, 0x0F0F0F0Fu, 0x0F0F0F0Fu, 0x0F0F0F0Fu, 0x120F0F0Fu, 0x757F2F0Eu,
+    0x6A5B7D7Du, 0x6F6F736Fu, 0x7373736Fu, 0x736F6F73u, 0x6F6F6F77u, 0x6D6F6F6Du, 0x756D6275u, 0x6E757575u,
+    0x345B686Cu, 0x2D221F23u, 0x524B3C36u, 0x5B5B5B5Bu, 0x5F5F5B5Fu, 0x5B5B5F5Fu, 0x5F5F5B5Fu, 0x5B5F5F5Fu,
+    0x5B5B5F5Bu, 0x5B5B5F5Bu, 0x5B5F5B5Bu, 0x5B575B5Bu, 0x5B575B5Bu, 0x53535357u, 0x53575353u, 0x52525252u,
+    0x52525252u, 0x52535252u, 0x53525353u, 0x57575353u, 0x57535757u, 0x57575357u, 0x5B5B5753u, 0x53575757u,
+    0x53575757u, 0x57575757u, 0x53535757u, 0x5B575357u, 0x5757575Bu, 0x52525353u, 0x52525252u, 0x52525252u,
+    0x52525352u, 0x53535753u, 0x57575357u, 0x57575757u, 0x5B575B57u, 0x5B5B5B5Bu, 0x5F5F5F5Bu, 0x5B5B5F5Bu,
+    0x5B5B5F5Bu, 0x5F5F5B5Fu, 0x5F5B5F5Fu, 0x5F5F5B5Bu, 0x5B5F5F5Fu, 0x343C4B52u, 0x241D1F26u, 0x6C6C3630u,
+    0x7575756Eu, 0x0D1D7F71u, 0x21211811u, 0x21212121u, 0x21212121u, 0x21212121u, 0x0F182121u, 0x757F2F0Du,
+    0x73637D7Du, 0x73737373u, 0x73737373u, 0x736C6373u, 0x6D6D6D73u, 0x6D6D6E6Du, 0x7A6D6277u, 0x6E75757Au,
+    0x7F7F7F62u, 0x7F7F7F7Fu, 0x7F7F7F7Du, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7D7F7F7Fu, 0x7D7D7D7Du, 0x7D7D7D7Du,
+    0x7D7D7D7Du, 0x7D7F7D7Du, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7D7D7D7Fu, 0x7D7D7D7Du,
+    0x7D7D7D7Du, 0x7D7D7D7Du, 0x7F7F7F7Du, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x627F7F7Fu,
+    0x7A75756Eu, 0x0D1D7F71u, 0x48484412u, 0x48484848u, 0x48484848u, 0x48484848u, 0x0F434848u, 0x757F2F0Du,
+    0x73617D7Au, 0x6B6B646Bu, 0x6373736Bu, 0x6B6B6B6Bu, 0x6C6C6A6Bu, 0x6D6D6D6Du, 0x7A6D6377u, 0x6E6E7175u,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x75716E6Eu, 0x0D1D7F71u, 0x48464312u, 0x45474848u, 0x43434344u, 0x43464544u, 0x0F2B4844u, 0x717F2F0Du,
+    0x64617D7Au, 0x6B6B644Fu, 0x6B6B6B6Bu, 0x6B636B6Bu, 0x73736B6Bu, 0x6C6D7373u, 0x7A6D616Cu, 0x6D71757Au,
+    0x7F7F7F62u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x627F7F7Fu,
+    0x7A75716Du, 0x0D1D7F71u, 0x21484312u, 0x0E111111u, 0x09070909u, 0x040E0909u, 0x0F2B4818u, 0x717F2F0Du,
+    0x64617D79u, 0x64646464u, 0x6B646464u, 0x6B646464u, 0x6B6B6B6Bu, 0x6C737373u, 0x756D6173u, 0x6D717175u,
+    0x7F7F7F62u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x627F7F7Fu,
+    0x7571716Du, 0x0D1D7F6Eu, 0x0E484312u, 0x29292909u, 0x29292929u, 0x21292A29u, 0x0F2B482Bu, 0x717F2F0Du,
+    0x64617D7Au, 0x60606064u, 0x60606060u, 0x6B646464u, 0x6B6A6B6Bu, 0x6B6B6B6Bu, 0x756D6373u, 0x6D6E6E75u,
+    0x7F7F7F62u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x627F7F7Fu,
+    0x756E6E6Du, 0x0D1D7F6Eu, 0x0E484312u, 0x2B434815u, 0x44434343u, 0x48484644u, 0x0F2B4848u, 0x717F2F0Du,
+    0x60617C75u, 0x60605060u, 0x605E5E64u, 0x6B646060u, 0x6B6B6B6Bu, 0x6B6B6B73u, 0x756D616Bu, 0x6D6E6E75u,
+    0x7F7F7F62u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x627F7F7Fu,
+    0x756E6E6Du, 0x0D1D7F6Eu, 0x0E474312u, 0x47464815u, 0x47474747u, 0x46464646u, 0x0F2B4845u, 0x717F2F0Du,
+    0x64617C75u, 0x60606064u, 0x605E5E60u, 0x6B646060u, 0x6B6B6A6Bu, 0x6B6B6B6Au, 0x716C616Bu, 0x6D6E6E71u,
+    0x7F7F7F62u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x627F7F7Fu,
+    0x71706E6Du, 0x0D1D7F6Du, 0x0E434312u, 0x46464815u, 0x46464646u, 0x47474746u, 0x0F2B4847u, 0x6E7F2F0Du,
+    0x64617D75u, 0x60606464u, 0x60605E60u, 0x6B646460u, 0x73736B6Bu, 0x6B6B6B6Au, 0x6E6C5F6Bu, 0x6C6E6E75u,
+    0x7F7F7F62u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x627F7F7Fu,
+    0x7570726Cu, 0x0D1B7F6Du, 0x09434312u, 0x47464815u, 0x46464646u, 0x47474747u, 0x0F2B4846u, 0x6E7F2F0Du,
+    0x64617C75u, 0x6064646Bu, 0x60606060u, 0x6B636064u, 0x6A6A6A6Au, 0x6A6A6A6Au, 0x716C596Bu, 0x6D6D6E71u,
+    0x7F7F7F62u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x627F7F7Fu,
+    0x716E6E6Eu, 0x0D1B7D6Du, 0x09444312u, 0x46464811u, 0x47464646u, 0x46464647u, 0x0F2B4846u, 0x6E7F2F0Du,
+    0x64617D79u, 0x64646B6Bu, 0x64646464u, 0x736B6464u, 0x736B6B73u, 0x6B737373u, 0x716C596Bu, 0x6C6D6E71u,
+    0x7F7F7F62u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x627F7F7Fu,
+    0x716E6E6Cu, 0x0D1D7D6Du, 0x06444312u, 0x46474406u, 0x46464746u, 0x46464646u, 0x0F2B4846u, 0x717F2F0Du,
+    0x64617879u, 0x2727556Bu, 0x27272727u, 0x27272727u, 0x27272727u, 0x27272727u, 0x6E6C5964u, 0x6C6D6E75u,
+    0x7F7F7F62u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x627F7F7Fu,
+    0x756E6E6Cu, 0x0D1B7A6Du, 0x11434311u, 0x47474411u, 0x46474646u, 0x47464646u, 0x0F2B4846u, 0x717F2F0Du,
+    0x64617875u, 0x1C14276Bu, 0x1C1C1C1Cu, 0x1C1C1C1Au, 0x1C1C1C1Au, 0x1C1A1C1Cu, 0x6E6C5464u, 0x6C6E6E71u,
+    0x7F7F7F62u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x627F7F7Fu,
+    0x716D6D6Cu, 0x0D1B7F6Du, 0x43444312u, 0x45464747u, 0x45474646u, 0x46454645u, 0x0F2B4846u, 0x6E7F2F0Du,
+    0x64617A75u, 0x6B1C276Bu, 0x6B6B6B6Bu, 0x6B6B6327u, 0x6B6B5827u, 0x1C27736Bu, 0x6D6C596Bu, 0x6C6C6D6Eu,
+    0x7F7F7F62u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x627F7F7Fu,
+    0x6E6D6C6Cu, 0x0D1B7D6Cu, 0x47484312u, 0x45474746u, 0x47464747u, 0x46464747u, 0x0F2B4846u, 0x717F2F0Du,
+    0x60617C75u, 0x6B1A2764u, 0x64646464u, 0x64645827u, 0x64645227u, 0x1C276B64u, 0x6D6C5964u, 0x6C6C6D6Eu,
+    0x7F7F7F62u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x627F7F7Fu,
+    0x6E6D6C6Cu, 0x0D1B7A6Cu, 0x45474312u, 0x45464746u, 0x46464647u, 0x46464646u, 0x0F2B4846u, 0x6E7F2F0Du,
+    0x60597875u, 0x641A2764u, 0x64646464u, 0x64645927u, 0x64644C27u, 0x1C276B64u, 0x6E695964u, 0x696E6D6Eu,
+    0x7F7F7F55u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x557F7F7Fu,
+    0x6E6D6E69u, 0x0D1B7A6Du, 0x48484312u, 0x46464646u, 0x46464546u, 0x48484646u, 0x0F2B4846u, 0x6E7F2F0Du,
+    0x5E607C71u, 0x641A2764u, 0x64646464u, 0x64605327u, 0x64644C27u, 0x1C276B64u, 0x6D6C5364u, 0x696C6D6Du,
+    0x7F7F7F55u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x557F7F7Fu,
+    0x6D6D6C69u, 0x0D1B7A6Cu, 0x2B434312u, 0x46454547u, 0x46464646u, 0x2A294746u, 0x0F2B4848u, 0x6E7F2F0Du,
+    0x5E607C71u, 0x601A2760u, 0x64606060u, 0x64645327u, 0x64644C27u, 0x1C276464u, 0x6D696064u, 0x696C6C6Du,
+    0x7F7F7F62u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x627F7F7Fu,
+    0x6D6C6C69u, 0x0D1B7A6Cu, 0x06294411u, 0x48484846u, 0x48484848u, 0x11114848u, 0x0F2B4848u, 0x6E7F2F0Du,
+    0x5E597C71u, 0x5E1A275Eu, 0x6460605Eu, 0x64645327u, 0x60644B27u, 0x1C276464u, 0x6D696064u, 0x696C6C6Eu,
+    0x7F7F7F51u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x517F7F7Fu,
+    0x6D6C6C69u, 0x0C1B766Cu, 0x052B4411u, 0x2A2A2B21u, 0x2129292Au, 0x15062121u, 0x0F2B4646u, 0x6D7F2F0Du,
+    0x5D607C71u, 0x5E1A275Eu, 0x6060605Eu, 0x60606051u, 0x60606051u, 0x1C276464u, 0x6D675364u, 0x666C6C6Eu,
+    0x7F7F7F51u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x517F7F7Fu,
+    0x6D6C6C66u, 0x0D1B766Cu, 0x042B4411u, 0x11111109u, 0x0E0E0E11u, 0x18040E0Eu, 0x0F2B4645u, 0x6D7F2F0Du,
+    0x5D5E7C71u, 0x5D1A275Du, 0x5E5E5E5Eu, 0x60605E5Eu, 0x60606060u, 0x1C276460u, 0x6D695364u, 0x66696C6Eu,
+    0x7F7F7F51u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x517F7F7Fu,
+    0x6D6C6966u, 0x0C1B766Cu, 0x03294411u, 0x46444618u, 0x48484746u, 0x0E094848u, 0x0F2B4744u, 0x6D7F2D0Du,
+    0x5D5E7C71u, 0x5D1A275Du, 0x5E5D5D5Du, 0x5E5E5E5Eu, 0x64606060u, 0x1A274B52u, 0x6C695464u, 0x62696C6Du,
+    0x7F7F7F51u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x517F7F7Fu,
+    0x6E6C6962u, 0x0C1B726Cu, 0x03214411u, 0x44462915u, 0x46464646u, 0x05064347u, 0x0F2B4821u, 0x6D7F2D0Du,
+    0x5D5E7671u, 0x5D1A275Du, 0x5E5D5D5Du, 0x5D5D5E5Eu, 0x6460605Eu, 0x1A273B4Bu, 0x6C695160u, 0x62696C6Cu,
+    0x7F7F7F51u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x517F7F7Fu,
+    0x6C6C6962u, 0x0C1B7C6Cu, 0x21464311u, 0x45474329u, 0x45464645u, 0x21294845u, 0x0F2B4843u, 0x6D7F2D0Du,
+    0x5D5E766Du, 0x5D1A285Du, 0x5D5D5D3Fu, 0x5D5D5D5Du, 0x60605E5Du, 0x1A273B4Bu, 0x6C695160u, 0x62696C6Eu,
+    0x7F7F7F51u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x517F7F7Fu,
+    0x6D6C6962u, 0x0C1B7269u, 0x48474311u, 0x46464647u, 0x46454546u, 0x48484646u, 0x0F2B4847u, 0x6D7F2D0Du,
+    0x5D5E766Du, 0x3F1A275Du, 0x5D5D5D5Du, 0x405D5D5Du, 0x5E5E4040u, 0x1A27273Bu, 0x6C695160u, 0x6269696Cu,
+    0x7F7F7F51u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x517F7F7Fu,
+    0x6C686962u, 0x0C1B726Cu, 0x44474311u, 0x46464645u, 0x46454646u, 0x46464646u, 0x0F2B4845u, 0x6C7F2D0Du,
+    0x5D53766Du, 0x5D1A275Du, 0x5D5D5D5Du, 0x335D5D5Du, 0x27273327u, 0x1A275127u, 0x6C695160u, 0x6167696Cu,
+    0x7F7F7F51u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x517F7F7Fu,
+    0x6C696761u, 0x0C1B6E6Cu, 0x45454311u, 0x45464545u, 0x46454545u, 0x45464646u, 0x0F2B4846u, 0x6D7F2D0Du,
+    0x5E53706Du, 0x331A275Eu, 0x33333333u, 0x36363333u, 0x36333333u, 0x1C1C3C36u, 0x6C665160u, 0x5F66696Cu,
+    0x7F7F7F36u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x367F7F7Fu,
+    0x6C69665Fu, 0x0C1B6E69u, 0x46464311u, 0x48484848u, 0x48484848u, 0x47484848u, 0x0F2B4845u, 0x6D7F2D0Du,
+    0x5E53726Du, 0x1A14275Eu, 0x1A1A1A1Au, 0x1A1A1A1Au, 0x1A1A1A1Au, 0x1C1A1A1Au, 0x6C665160u, 0x5F66666Cu,
+    0x7F7F7F51u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x517F7F7Fu,
+    0x6C66665Fu, 0x0C1B6E69u, 0x45474311u, 0x1818212Bu, 0x18181818u, 0x43181818u, 0x0F2B4746u, 0x6C7F2D0Du,
+    0x5D51706Du, 0x40405D5Du, 0x333F3F40u, 0x1A1A1C27u, 0x5D40271Cu, 0x5E5E4040u, 0x69665160u, 0x5C666669u,
+    0x7F7F7F51u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x517F7F7Fu,
+    0x6966665Cu, 0x0B1B6E69u, 0x15484311u, 0x15071115u, 0x11181818u, 0x21091509u, 0x0F2B4748u, 0x6C7F2D0Du,
+    0x5D53726Cu, 0x5D5D5D5Eu, 0x141C405Du, 0x27271C1Au, 0x271A1A1Cu, 0x605E5E5Eu, 0x69625160u, 0x56626669u,
+    0x7F7F7F36u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x367F7F7Fu,
+    0x6C666256u, 0x0B1B6C66u, 0x06474311u, 0x432B4421u, 0x46211548u, 0x11154443u, 0x0F2B4748u, 0x6C7F2D0Du,
+    0x5E516E6Du, 0x5D5D5D5Eu, 0x361C1433u, 0x33405D5Du, 0x1427514Bu, 0x5E5E601Cu, 0x6966515Eu, 0x5562666Cu,
+    0x7F7F7F36u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x367F7F7Fu,
+    0x6C666255u, 0x0B1B6C66u, 0x0544430Fu, 0x44444821u, 0x48180947u, 0x110E4345u, 0x0F2B4748u, 0x6C7D2D0Du,
+    0x5D53706Du, 0x335D5D5Du, 0x5D5D2714u, 0x33405D5Du, 0x4B3E2727u, 0x5E5E1C14u, 0x68624F5Eu, 0x55626269u,
+    0x7F7F7F36u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x367F7F7Fu,
+    0x69626255u, 0x0B1B6C66u, 0x05444311u, 0x44464829u, 0x45181148u, 0x11154844u, 0x0F2B4748u, 0x6C7F2D0Du,
+    0x5D51706Cu, 0x14405D5Du, 0x5D5D5D1Eu, 0x5D5D5D5Du, 0x36275D5Du, 0x5D27144Bu, 0x6962405Du, 0x52616269u,
+    0x7F7F7F36u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x367F7F7Fu,
+    0x69626152u, 0x0B1B6966u, 0x09474311u, 0x44444821u, 0x48211148u, 0x11154843u, 0x0F2B4748u, 0x6C7F2D0Du,
+    0x5D51726Du, 0x1A1C5D5Eu, 0x5D5D5D5Du, 0x5D5D5D5Du, 0x275D5D5Du, 0x4014273Cu, 0x6662405Du, 0x4C5F6269u,
+    0x7F7F7F36u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x367F7F7Fu,
+    0x69625F4Cu, 0x0B1B6966u, 0x09484311u, 0x48444818u, 0x482C1129u, 0x18054448u, 0x0F2B4645u, 0x6C7F2D0Du,
+    0x5D516E6Cu, 0x2714515Eu, 0x5D5D5D5Du, 0x5D5D5D5Du, 0x5E5D403Eu, 0x331A4027u, 0x6762405Du, 0x4C5F6266u,
+    0x7F7F7F33u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x337F7F7Fu,
+    0x66625F4Cu, 0x0B1B6966u, 0x11474311u, 0x2B441803u, 0x11110E04u, 0x21040915u, 0x0F2B482Bu, 0x687D2D0Du,
+    0x40516E6Cu, 0x4A143B5Eu, 0x5D5D5D5Du, 0x405D505Du, 0x5E5D2714u, 0x1C1C3627u, 0x6262405Du, 0x4C5F6266u,
+    0x7F7F7F36u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x367F7F7Fu,
+    0x66625F4Cu, 0x0A1B6962u, 0x2B454311u, 0x09090411u, 0x182B2915u, 0x2C211511u, 0x0F2B4744u, 0x6C7D2D0Cu,
+    0x40516E6Cu, 0x5D1A275Eu, 0x5D5D5D5Du, 0x5050505Du, 0x5D5D4033u, 0x1A273336u, 0x6262405Du, 0x4C5C5F66u,
+    0x7F7F7F2Du, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x2D7F7F7Fu,
+    0x625F5C4Cu, 0x0B1B6962u, 0x44454311u, 0x2918182Cu, 0x43452B29u, 0x47442B2Au, 0x0F2B4746u, 0x697D2D0Du,
+    0x404A706Cu, 0x5D1A275Eu, 0x3F505050u, 0x3F3F3F50u, 0x50503F3Fu, 0x1A274040u, 0x665F405Du, 0x4B565F66u,
+    0x7F7F7F2Du, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x2D7F7F7Fu,
+    0x625F564Bu, 0x0A1B6962u, 0x44454311u, 0x41434446u, 0x46464643u, 0x44454545u, 0x0F2B4745u, 0x697D2D0Cu,
+    0x3D4F6E6Cu, 0x501A275Du, 0x3F3F5050u, 0x3F3F3F3Fu, 0x3F3F3F38u, 0x1A275D50u, 0x625C4A5Du, 0x4B555F66u,
+    0x7F7F7F36u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x367F7F7Fu,
+    0x665F554Bu, 0x0A1B6662u, 0x44452C0Fu, 0x47474745u, 0x46454547u, 0x47454746u, 0x0F2B4745u, 0x697D2D0Cu,
+    0x3D4F6E6Cu, 0x501A2750u, 0x3F3D5050u, 0x3D3F3132u, 0x3D3F3F38u, 0x1A275D50u, 0x62564A5Eu, 0x4B565F62u,
+    0x7F7F7F2Du, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x2D7F7F7Fu,
+    0x625F564Bu, 0x0A19665Fu, 0x44452C0Fu, 0x2B2B2B2Cu, 0x432B2C2Cu, 0x432C432Cu, 0x0F2B4746u, 0x697C2D0Cu,
+    0x3D4A6E6Cu, 0x501A2750u, 0x3D505050u, 0x3D3D3238u, 0x3D32383Fu, 0x1A1E5D50u, 0x61584A5Eu, 0x3C555C62u,
+    0x7F7F7F2Du, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x2D7F7F7Fu,
+    0x625C553Cu, 0x0A19665Fu, 0x18482C0Fu, 0x05050403u, 0x04050505u, 0x04050404u, 0x0F2A4818u, 0x69762D0Cu,
+    0x3D4A6C6Cu, 0x501A2750u, 0x3D3D5050u, 0x3F3D5049u, 0x3D383232u, 0x1A275D50u, 0x5F564A5Eu, 0x3C525562u,
+    0x7F7F7F2Du, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x2D7F7F7Fu,
+    0x6255523Cu, 0x0A19625Cu, 0x18472C0Fu, 0x15181815u, 0x21050918u, 0x03182118u, 0x0F2A4818u, 0x6976260Cu,
+    0x3D4A6E69u, 0x491A273Du, 0x3D493D3Du, 0x323D3D3Du, 0x50503D32u, 0x1A275A50u, 0x5F554A5Eu, 0x3C525562u,
+    0x7F7F7F2Du, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x2D7F7F7Fu,
+    0x6255523Cu, 0x0A19625Cu, 0x44442C0Fu, 0x18212944u, 0x29041118u, 0x03294543u, 0x0F2A4818u, 0x697C260Cu,
+    0x3D516C69u, 0x3D1A1E3Du, 0x3D503D32u, 0x323D3D3Du, 0x50504939u, 0x1A275A4Au, 0x5C524A5Eu, 0x3B4C5562u,
+    0x7F7F7F2Du, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x2D7F7F7Fu,
+    0x62554C3Bu, 0x08195F56u, 0x44452C0Fu, 0x41474544u, 0x43051541u, 0x032A4744u, 0x0F2A4818u, 0x6976260Cu,
+    0x3A516E69u, 0x39161E50u, 0x3D323232u, 0x32324949u, 0x50374938u, 0x1A275A50u, 0x5F524A5Eu, 0x3B525262u,
+    0x7F7F7F24u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x247F7F7Fu,
+    0x6252523Bu, 0x0A195F5Cu, 0x42452C0Fu, 0x45424244u, 0x47091848u, 0x03294744u, 0x0F2A4818u, 0x667C260Cu,
+    0x3E516968u, 0x26142750u, 0x251D1F25u, 0x25262D2Du, 0x342D2F26u, 0x1A1C3B33u, 0x5C524A5Eu, 0x364C525Fu,
+    0x7F7F7F22u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x227F7F7Fu,
+    0x5F524C36u, 0x08195F55u, 0x43442C0Fu, 0x2B474742u, 0x450E0415u, 0x04434543u, 0x0F2A4815u, 0x6672260Cu,
+    0x4A516969u, 0x14141E50u, 0x14141414u, 0x14141414u, 0x14141414u, 0x1C141414u, 0x5C524A5Au, 0x364B525Cu,
+    0x7F7F7F22u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x227F7F7Fu,
+    0x5C524B36u, 0x08195C56u, 0x46442C0Fu, 0x05112945u, 0x29031111u, 0x03214848u, 0x0F2A4818u, 0x6672260Bu,
+    0x4A516969u, 0x2525354Eu, 0x1F19191Fu, 0x26252625u, 0x3634302Fu, 0x27273E36u, 0x554C4A5Eu, 0x344B5256u,
+    0x7F7F7F23u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x237F7F7Fu,
+    0x56524B34u, 0x08195552u, 0x29452B0Fu, 0x2A150309u, 0x03112129u, 0x11031111u, 0x0F2A4743u, 0x6972260Cu,
+    0x3A4A6969u, 0x3132373Au, 0x31313131u, 0x32313131u, 0x50503931u, 0x1C141C36u, 0x524C4A5Eu, 0x344B4C55u,
+    0x7F7F7F22u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x227F7F7Fu,
+    0x554C4B34u, 0x08195C52u, 0x18472B0Fu, 0x2A452105u, 0x182A292Au, 0x2C180909u, 0x0F2B4743u, 0x666E260Bu,
+    0x374A6966u, 0x3237373Au, 0x32323231u, 0x37323132u, 0x1C303937u, 0x1C1A1A14u, 0x554C4A4Fu, 0x303C4C55u,
+    0x7F7F7F22u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x227F7F7Fu,
+    0x554C3C30u, 0x08195552u, 0x2C422B0Eu, 0x44434742u, 0x2A414545u, 0x432C2B29u, 0x0F2A4544u, 0x666E260Bu,
+    0x374A6969u, 0x37373232u, 0x32323232u, 0x49373232u, 0x14141C3Au, 0x1C1C5028u, 0x524C3E50u, 0x303C4B52u,
+    0x7F7F7F1Du, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x1D7F7F7Fu,
+    0x524B3C30u, 0x07195552u, 0x42442B0Eu, 0x42434242u, 0x44444242u, 0x45444442u, 0x0D2A4544u, 0x666E260Bu,
+    0x374B6966u, 0x31323132u, 0x32323131u, 0x1E3A4932u, 0x35201414u, 0x1C1C361Eu, 0x524B3E50u, 0x2D3C4B55u,
+    0x7F7F7F1Du, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x1D7F7F7Fu,
+    0x554B3C2Du, 0x07195252u, 0x42442B0Eu, 0x45454444u, 0x45444445u, 0x44444545u, 0x0E2A4742u, 0x626E260Bu,
+    0x3A4A6962u, 0x31313237u, 0x32313131u, 0x14141E37u, 0x1E24301Eu, 0x1C1C301Cu, 0x524B3A4Eu, 0x303C4B52u,
+    0x7F7F7F23u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x237F7F7Fu,
+    0x524B3C30u, 0x0719524Cu, 0x43442B0Eu, 0x21292A2Bu, 0x2B43432Au, 0x45432B2Au, 0x0F2A4544u, 0x626E260Bu,
+    0x3A4A6966u, 0x31313737u, 0x20313131u, 0x3A1E1414u, 0x39231E35u, 0x1C1C2824u, 0x4C4B3A49u, 0x2D3B4B52u,
+    0x7F7F7F1Du, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x1D7F7F7Fu,
+    0x524B3B2Du, 0x0719524Cu, 0x0E412B0Eu, 0x04040404u, 0x06060604u, 0x15050609u, 0x0E2A4544u, 0x626E240Bu,
+    0x3A4A6662u, 0x3132373Au, 0x14161F31u, 0x3D503A1Cu, 0x32323735u, 0x161A2820u, 0x524B3549u, 0x2D3B4B52u,
+    0x7F7F7F22u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x227F7F7Fu,
+    0x524B3B2Du, 0x07194C4Cu, 0x032B2C0Eu, 0x21182915u, 0x18150321u, 0x04092111u, 0x0D2A4743u, 0x626C240Au,
+    0x374A6962u, 0x1F31323Du, 0x351C1416u, 0x3A3A3A50u, 0x39353A3Au, 0x1A1C2820u, 0x4C4B2632u, 0x2D3B3C52u,
+    0x7F7F7F1Du, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x1D7F7F7Fu,
+    0x523C3B2Du, 0x07194C4Cu, 0x032B2C0Du, 0x412A4415u, 0x1815032Au, 0x050E1818u, 0x0D2A4743u, 0x626E260Au,
+    0x374A6662u, 0x14162531u, 0x3D3D2F1Au, 0x3A3E3A37u, 0x373A3A3Au, 0x161A2623u, 0x4C4B1F31u, 0x24363B4Cu,
+    0x7F7F7F22u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x227F7F7Fu,
+    0x4C3B3624u, 0x07194C4Bu, 0x032B2C0Eu, 0x42444718u, 0x44180329u, 0x060E2C47u, 0x0D2A4543u, 0x616C260Bu,
+    0x313E6262u, 0x2D14141Eu, 0x37373D3Fu, 0x34503732u, 0x35493014u, 0x16163237u, 0x4C3C2631u, 0x24363C4Cu,
+    0x7F7F7F22u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x227F7F7Fu,
+    0x4C3C3624u, 0x07194B4Cu, 0x032B2B0Cu, 0x44414518u, 0x4718032Au, 0x06114541u, 0x0D2A4544u, 0x616C240Au,
+    0x313E6261u, 0x16141D31u, 0x373D3D28u, 0x34503A37u, 0x3737341Cu, 0x16163232u, 0x4B3C3531u, 0x23343B52u,
+    0x7F7F7F1Du, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x1D7F7F7Fu,
+    0x523B3423u, 0x07194C4Bu, 0x032B2C0Cu, 0x45414421u, 0x440E0321u, 0x04154542u, 0x0D2A4543u, 0x6169240Au,
+    0x313E6261u, 0x1E313131u, 0x382F1A14u, 0x493A3A37u, 0x32374E50u, 0x161A3232u, 0x4B3C2632u, 0x2234364Bu,
+    0x7F7F7F1Du, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x1D7F7F7Fu,
+    0x4B363423u, 0x07194B4Bu, 0x03292C0Cu, 0x42414521u, 0x44180E2Bu, 0x04114543u, 0x0D2A472Au, 0x5F6C240Au,
+    0x313A6262u, 0x31313131u, 0x1E141625u, 0x3A3A3D37u, 0x32373A3Au, 0x1C1A4937u, 0x4B3B3539u, 0x1F303B4Bu,
+    0x7F7F7F1Du, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x1D7F7F7Fu,
+    0x4B3B3422u, 0x06194B3Cu, 0x0318430Cu, 0x42414411u, 0x42444542u, 0x030E4543u, 0x0D2A4818u, 0x6169240Bu,
+    0x31356661u, 0x31313131u, 0x141F3131u, 0x493D2014u, 0x32373A3Au, 0x161C4937u, 0x4B3B3532u, 0x1F30364Bu,
+    0x7F7F7F1Du, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x1D7F7F7Fu,
+    0x4B36301Fu, 0x06193C3Cu, 0x03212C0Bu, 0x4241420Eu, 0x42424343u, 0x15214442u, 0x0D2A472Cu, 0x5F69240Au,
+    0x313A6261u, 0x31313131u, 0x32323131u, 0x2816141Eu, 0x3737373Du, 0x1A1A4937u, 0x3C3B3549u, 0x1F2D364Bu,
+    0x7F7F7F22u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x227F7F7Fu,
+    0x4B362D1Fu, 0x06153C3Cu, 0x29422A0Cu, 0x4242422Bu, 0x42424242u, 0x47454242u, 0x0D2A4444u, 0x5F69240Au,
+    0x313A625Fu, 0x31313131u, 0x32373231u, 0x141A2632u, 0x373D2F1Au, 0x1C1A4935u, 0x3C363549u, 0x1F2D344Bu,
+    0x7F7F7F1Du, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x1D7F7F7Fu,
+    0x4B342D1Fu, 0x06153C3Cu, 0x42422A0Cu, 0x43434142u, 0x43414142u, 0x43434243u, 0x0D2A4444u, 0x5C66240Au,
+    0x313A6258u, 0x32313232u, 0x32323232u, 0x28393232u, 0x3A1E1416u, 0x1C1C4E4Eu, 0x3C343549u, 0x1D2D343Cu,
+    0x7F7F7F19u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x197F7F7Fu,
+    0x3C34281Du, 0x06153B3Cu, 0x41412B0Bu, 0x41414141u, 0x43424243u, 0x2C444243u, 0x0D2A4529u, 0x5666240Au,
+    0x323E5C56u, 0x32323232u, 0x32323237u, 0x39373232u, 0x14141E37u, 0x1C1C4E27u, 0x3B36354Eu, 0x1D24343Cu,
+    0x7F7F7F1Du, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x1D7F7F7Fu,
+    0x3C34241Du, 0x05153B3Bu, 0x41412A0Bu, 0x41414141u, 0x41424143u, 0x0E444242u, 0x0D2A4709u, 0x5566240Au,
+    0x323E5C58u, 0x32323232u, 0x20233837u, 0x3D373231u, 0x1E1E161Eu, 0x1C1A1A14u, 0x3B363549u, 0x1D28343Cu,
+    0x7F7F7F1Du, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x1D7F7F7Fu,
+    0x3C34281Du, 0x05153B3Bu, 0x41412A0Au, 0x432C2C2Cu, 0x41434141u, 0x032B4443u, 0x0C2A470Eu, 0x5562240Au,
+    0x383E5C5Fu, 0x32323232u, 0x14141E32u, 0x37373225u, 0x1A141416u, 0x1C141A28u, 0x3B343549u, 0x1B24343Bu,
+    0x7F7F7F1Du, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x1D7F7F7Fu,
+    0x3B34241Bu, 0x05153B3Bu, 0x41412A0Au, 0x44424442u, 0x42424242u, 0x05424442u, 0x0D2A470Eu, 0x5662230Au,
+    0x383E5C56u, 0x32313132u, 0x1625141Au, 0x28323216u, 0x16353014u, 0x1E283414u, 0x3B343549u, 0x1B24303Cu,
+    0x7F7F7F19u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x197F7F7Fu,
+    0x3C30241Bu, 0x05153636u, 0x2C412A0Bu, 0x29211821u, 0x2B2B2A29u, 0x092A2B2Bu, 0x0C2A4711u, 0x5562230Au,
+    0x3D3E5C5Fu, 0x1E323238u, 0x1F313214u, 0x1A382014u, 0x351A2F16u, 0x4935141Cu, 0x3634353Du, 0x1B242D3Bu,
+    0x7F7F7F19u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x197F7F7Fu,
+    0x3B2D241Bu, 0x05153636u, 0x18442A0Au, 0x04030303u, 0x06050504u, 0x03040606u, 0x0C2A4711u, 0x5562230Au,
+    0x3D4A5C56u, 0x1424383Du, 0x31313226u, 0x14251417u, 0x28282028u, 0x4916163Au, 0x3630353Au, 0x19243036u,
+    0x7F7F7F13u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x137F7F7Fu,
+    0x36302419u, 0x05153636u, 0x2A422A0Au, 0x29292918u, 0x21212121u, 0x03212121u, 0x0C294711u, 0x55622308u,
+    0x3D3E5C53u, 0x1C163238u, 0x31313138u, 0x16141631u, 0x3A491E35u, 0x2D142849u, 0x36303549u, 0x19223036u,
+    0x7F7F7F19u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x197F7F7Fu,
+    0x36302219u, 0x05153436u, 0x41412A09u, 0x2B2B2B2Cu, 0x2A2A2A2Au, 0x03182A2Au, 0x0C2A4509u, 0x52622308u,
+    0x3D3E5C53u, 0x2514373Fu, 0x32323132u, 0x20141B31u, 0x3A492824u, 0x1E143A3Au, 0x362D3549u, 0x19222D36u,
+    0x7F7F7F13u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x127F7F7Fu,
+    0x362D2219u, 0x05153434u, 0x2C412A08u, 0x4141412Cu, 0x42424241u, 0x04214242u, 0x0C2A4406u, 0x52622208u,
+    0x3D3E5256u, 0x3114243Fu, 0x32313131u, 0x2F1E3132u, 0x3A3A352Fu, 0x161C3235u, 0x34283539u, 0x15222D36u,
+    0x7F7F7F12u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x127F7F7Fu,
+    0x362D2215u, 0x05153434u, 0x2C412A09u, 0x412C2C2Cu, 0x41414141u, 0x03214241u, 0x0C2B2903u, 0x555F2208u,
+    0x3D3E555Cu, 0x3116203Fu, 0x32313131u, 0x37323732u, 0x3A3A3A3Du, 0x161E3935u, 0x34283539u, 0x15222636u,
+    0x7F7F7F12u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x127F7F7Fu,
+    0x36262215u, 0x05153434u, 0x2C412A09u, 0x412C2C2Cu, 0x41414141u, 0x112A4241u, 0x0B2A2C11u, 0x565F2208u,
+    0x3D3E5554u, 0x3116203Fu, 0x32323131u, 0x3D3D3737u, 0x373A3A3Au, 0x161E4937u, 0x34283549u, 0x15222434u,
+    0x7F7F7F12u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x127F7F7Fu,
+    0x34242215u, 0x05153434u, 0x2C412A08u, 0x2C2C2C2Cu, 0x412C2C2Cu, 0x42424141u, 0x0C2A4544u, 0x525F2208u,
+    0x383E5552u, 0x31141F3Fu, 0x38323131u, 0x3A3D3D3Du, 0x37373A3Au, 0x16164937u, 0x34283549u, 0x121F2D34u,
+    0x7F017F11u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x117F017Fu,
+    0x342D1F12u, 0x05153430u, 0x2C2C2908u, 0x42424242u, 0x44444242u, 0x45454545u, 0x0C294242u, 0x525F2208u,
+    0x3F3E5552u, 0x1D14313Fu, 0x38313131u, 0x3A373D3Du, 0x3737373Au, 0x1E143939u, 0x30282639u, 0x121F2436u,
+    0x7F007F11u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x117F007Fu,
+    0x36241F12u, 0x04123030u, 0x29412908u, 0x110E0911u, 0x11111111u, 0x15111111u, 0x0C294529u, 0x525F2207u,
+    0x383A5251u, 0x16163131u, 0x32313131u, 0x37373D37u, 0x37373737u, 0x2F142039u, 0x34282531u, 0x111F2434u,
+    0x7F007F05u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x057F007Fu,
+    0x34241F11u, 0x04152D30u, 0x11422907u, 0x05090903u, 0x09030306u, 0x03060604u, 0x0B294715u, 0x4C5C2207u,
+    0x313A5552u, 0x14313131u, 0x31313120u, 0x3D3D3732u, 0x393A3D37u, 0x391E1426u, 0x30283231u, 0x111F2434u,
+    0x7F007F04u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x047F007Fu,
+    0x34241F11u, 0x04152D2Fu, 0x212C2908u, 0x11182129u, 0x29040918u, 0x0321412Au, 0x0B294715u, 0x4C5C2208u,
+    0x313D5551u, 0x20313131u, 0x31312314u, 0x3A373732u, 0x353D3A3Au, 0x393A1614u, 0x30243231u, 0x0E1F2234u,
+    0x7F007F09u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x097F007Fu,
+    0x34221F0Eu, 0x04152D2Du, 0x2C2C2907u, 0x212A2A2Cu, 0x21030E18u, 0x0321422Cu, 0x0B294715u, 0x4C5C2208u,
+    0x313A4C52u, 0x31313131u, 0x371E141Eu, 0x3D503D3Fu, 0x14283A50u, 0x493D3A16u, 0x30243539u, 0x0B1F2334u,
+    0x7F007F02u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x027F007Fu,
+    0x34221F0Cu, 0x04122D2Fu, 0x2C2C2907u, 0x2B2C2C2Cu, 0x42041845u, 0x03214241u, 0x0B294715u, 0x52552207u,
+    0x313A5252u, 0x31313131u, 0x1414233Fu, 0x20271E1Cu, 0x1C14161Cu, 0x2D493A3Eu, 0x2D24354Eu, 0x0C1D2334u,
+    0x7F007F03u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x037F007Fu,
+    0x34231D0Cu, 0x04122D2Du, 0x2C2C2907u, 0x42412C2Cu, 0x4106092Au, 0x0329422Cu, 0x0B294715u, 0x525C2207u,
+    0x383E5252u, 0x38313131u, 0x20383F38u, 0x1616161Au, 0x4F331C16u, 0x161E504Au, 0x2D24354Fu, 0x0E1D222Du,
+    0x7F007F05u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x057F007Fu,
+    0x2D221D0Eu, 0x04122D2Du, 0x2C2C2907u, 0x09214141u, 0x2C040303u, 0x032A4442u, 0x0A294711u, 0x4C5C2207u,
+    0x3F3A4C52u, 0x3831383Fu, 0x1A20323Fu, 0x281A1616u, 0x4A405D50u, 0x1614274Fu, 0x2D23354Fu, 0x0A1D2230u,
+    0x7F007F03u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x037F007Fu,
+    0x30221D0Au, 0x04152D2Du, 0x2C2C2907u, 0x11030518u, 0x09031821u, 0x03092929u, 0x0B294429u, 0x52552207u,
+    0x3F3A4C52u, 0x3F383F3Fu, 0x1E161420u, 0x14161E1Eu, 0x5E4A3B1Au, 0x16141427u, 0x2D22354Fu, 0x0B1D2230u,
+    0x7F007F03u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x037F007Fu,
+    0x30221D0Bu, 0x0412262Du, 0x15422906u, 0x2A290602u, 0x05181818u, 0x21050303u, 0x0B294241u, 0x52552207u,
+    0x3F3E4C4Cu, 0x1E3F3F3Fu, 0x3F382014u, 0x33403F3Fu, 0x274B1414u, 0x141E2714u, 0x2D232F4Fu, 0x081D2230u,
+    0x7F007F02u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x027F007Fu,
+    0x30221D08u, 0x04122D2Du, 0x182C2906u, 0x2A2B4118u, 0x21292B41u, 0x2B291818u, 0x0A29422Cu, 0x4C552207u,
+    0x3F3E524Cu, 0x14263F3Fu, 0x38383F26u, 0x403D3D3Du, 0x1414164Au, 0x161C5E1Eu, 0x2D223550u, 0x061B2230u,
+    0x7F007F02u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x027F007Fu,
+    0x30221B06u, 0x0412242Du, 0x2B2C2906u, 0x2C2C2C2Cu, 0x2A2C412Cu, 0x412B2B2Au, 0x0A294241u, 0x4C5C2207u,
+    0x3F3E4C4Bu, 0x1E16383Fu, 0x383F383Fu, 0x403D3F3Fu, 0x27143640u, 0x161C4F4Fu, 0x2D223550u, 0x051D1F2Du,
+    0x7F007F02u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x027F007Fu,
+    0x2D1F1D05u, 0x0412242Du, 0x2C2C2906u, 0x41412C2Bu, 0x42414141u, 0x412C4245u, 0x0A294241u, 0x4B552207u,
+    0x3F3A4C4Cu, 0x31143131u, 0x3D38383Fu, 0x403D3528u, 0x4F334A40u, 0x161E504Au, 0x2D223550u, 0x061B222Du,
+    0x7F007F02u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x027F007Fu,
+    0x28221B06u, 0x04122428u, 0x2B2C2906u, 0x0E182C2Cu, 0x09060405u, 0x41442A18u, 0x0B294241u, 0x4B522207u,
+    0x3F3A4C4Cu, 0x38161F31u, 0x3D3F3838u, 0x40501E14u, 0x3E404040u, 0x161E503Eu, 0x2D22353Du, 0x04191F2Du,
+    0x7F007F00u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x007F007Fu,
+    0x2D1F1904u, 0x04122428u, 0x2C2C2906u, 0x04030529u, 0x0911110Eu, 0x41150303u, 0x0A294241u, 0x4B551F07u,
+    0x3F3A4C4Cu, 0x3F161F31u, 0x3F383238u, 0x40403A34u, 0x3E40353Au, 0x161E3D3Au, 0x2D22353Du, 0x041B1D2Du,
+    0x7F007F00u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x007F007Fu,
+    0x2D1D1B04u, 0x04122424u, 0x2B2C2906u, 0x15110304u, 0x18181818u, 0x18030918u, 0x0A294244u, 0x4B551F07u,
+    0x3F3A4C4Cu, 0x3F16203Fu, 0x3D383838u, 0x40403D40u, 0x3D3E3A3Eu, 0x161E3837u, 0x26222F3Du, 0x041B222Du,
+    0x7F007F02u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x027F007Fu,
+    0x2D221B04u, 0x04122424u, 0x15412906u, 0x21110903u, 0x2B2C2C2Bu, 0x04052921u, 0x0A29422Cu, 0x4B552207u,
+    0x3F3A4C4Cu, 0x3F16203Fu, 0x3D3D3F38u, 0x403E403Du, 0x3D3E4040u, 0x16173837u, 0x2D22263Du, 0x05191F28u,
+    0x7F007F00u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x007F007Fu,
+    0x281F1905u, 0x04122428u, 0x042C2906u, 0x41291804u, 0x412C2C2Cu, 0x03184141u, 0x0A294529u, 0x4B552207u,
+    0x3F3A4C4Cu, 0x3F16203Fu, 0x3D3F3F38u, 0x4040403Du, 0x373E4040u, 0x16173237u, 0x2422263Du, 0x041B1D28u,
+    0x7F007F00u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x007F007Fu,
+    0x281D1B04u, 0x04122424u, 0x032B2906u, 0x2C2C4106u, 0x2C2C2C2Cu, 0x0329412Cu, 0x0A294421u, 0x4B552207u,
+    0x503E4C4Bu, 0x3816203Fu, 0x38323838u, 0x4040403Du, 0x373D3A3Eu, 0x161E3832u, 0x2D222632u, 0x041B1F2Du,
+    0x7F007F00u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x007F007Fu,
+    0x2D1F1B04u, 0x04122424u, 0x042B2906u, 0x2B412B03u, 0x2C2C2C2Bu, 0x0318452Cu, 0x0A292C18u, 0x4B522207u,
+    0x503E4C4Bu, 0x31161D3Fu, 0x38313131u, 0x50505050u, 0x383D3D50u, 0x161E3232u, 0x2822263Du, 0x041B1F2Du,
+    0x7F007F00u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x007F007Fu,
+    0x2D1F1B04u, 0x04122324u, 0x152C2906u, 0x422A0603u, 0x42424142u, 0x11031842u, 0x08294121u, 0x4B522207u,
+    0x493E4C4Bu, 0x31171D3Fu, 0x28263131u, 0x28333328u, 0x28282828u, 0x161E201Eu, 0x24222F50u, 0x031B1D28u,
+    0x7F007F00u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x007F007Fu,
+    0x281D1B03u, 0x04122424u, 0x292C2906u, 0x0E030310u, 0x18212118u, 0x29180306u, 0x0A294429u, 0x4B521F07u,
+    0x493E4C4Bu, 0x31171F3Fu, 0x26253131u, 0x3333282Du, 0x24283333u, 0x161E3E28u, 0x24223550u, 0x04191F28u,
+    0x7F007F00u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x007F007Fu,
+    0x281F1904u, 0x04122324u, 0x2B2C2906u, 0x0E182121u, 0x06040405u, 0x2A2C2910u, 0x0A294241u, 0x4B521F07u,
+    0x313A4C4Cu, 0x17141F3Fu, 0x1E171717u, 0x1C1C1E1Eu, 0x161C1C1Cu, 0x16141C1Cu, 0x24222F50u, 0x041B1F24u,
+    0x7F007F00u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x007F007Fu,
+    0x241F1B04u, 0x04122424u, 0x2B2C2906u, 0x2A29292Bu, 0x2121292Au, 0x412C2A29u, 0x0829422Cu, 0x4B522207u,
+    0x313A4C4Cu, 0x17172531u, 0x16171717u, 0x1A1A1616u, 0x1A1A1A1Au, 0x1C1A1A1Au, 0x2422304Eu, 0x04191F28u,
+    0x7F007F00u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x007F007Fu,
+    0x281F1904u, 0x04122423u, 0x2C412A06u, 0x2C41412Cu, 0x2B2B2C2Cu, 0x42424241u, 0x0A2A4542u, 0x4B522207u,
+    0x313A4C4Cu, 0x3F3F3131u, 0x32313131u, 0x5050493Fu, 0x50505050u, 0x1C1C3E5Au, 0x2422304Fu, 0x04191F30u,
+    0x7F007F00u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x007F007Fu,
+    0x301F1904u, 0x04122424u, 0x18181805u, 0x18181818u, 0x21212121u, 0x21212121u, 0x0A182121u, 0x4B522207u,
+    0x393A4C4Cu, 0x49493932u, 0x32323239u, 0x4E493939u, 0x3B5A4E3Eu, 0x1C14141Cu, 0x24222F4Fu, 0x041B1F2Du,
+    0x7F007F00u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x007F007Fu,
+    0x2D1F1B04u, 0x04122424u, 0x04040405u, 0x05050504u, 0x05050505u, 0x07070707u, 0x0B070707u, 0x4B522207u,
+    0x493A4C4Cu, 0x49494949u, 0x4949494Eu, 0x3A494949u, 0x141C3E5Au, 0x1C1A2714u, 0x24222650u, 0x041B1F28u,
+    0x7F007F00u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x007F007Fu,
+    0x281F1B04u, 0x04122424u, 0x06050506u, 0x07060606u, 0x08080807u, 0x0B0A0808u, 0x0B0B0B0Bu, 0x4B522207u,
+    0x493A4C4Cu, 0x49494949u, 0x4E4E4E4Eu, 0x3E504E4Eu, 0x2714141Eu, 0x1A1A5A3Bu, 0x2822305Au, 0x041B1F30u,
+    0x7F007F00u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x007F007Fu,
+    0x301F1B04u, 0x04122328u, 0x05050505u, 0x06060606u, 0x08070707u, 0x0A080808u, 0x0C0A0A0Au, 0x4C552207u,
+    0x4E3A4C4Cu, 0x4E494E4Eu, 0x4E4F4F4Eu, 0x14274F5Au, 0x28362714u, 0x1A1C3416u, 0x24223050u, 0x051B1F2Du,
+    0x7F007F00u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x007F007Fu,
+    0x2D1F1B05u, 0x04122424u, 0x06050505u, 0x07070606u, 0x07070707u, 0x08080808u, 0x0C0B0A0Au, 0x4C551F07u,
+    0x5A3E4C4Cu, 0x4E4F5A5Au, 0x4F5A4F4Eu, 0x1C141427u, 0x331E333Bu, 0x1A1C3427u, 0x2422355Au, 0x041D1D30u,
+    0x7F007F00u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x007F007Fu,
+    0x301D1D04u, 0x04122424u, 0x06050505u, 0x06060606u, 0x08070707u, 0x0A0A0808u, 0x0B0B0A0Au, 0x4C551F07u,
+    0x5A4A4B52u, 0x4F4F5A5Au, 0x14275A5Au, 0x5A3C1C14u, 0x5A4A273Bu, 0x1A1C3427u, 0x24223549u, 0x051B1F30u,
+    0x7F007F00u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x007F007Fu,
+    0x301F1B05u, 0x04122424u, 0x06050506u, 0x0A070606u, 0x08080B0Cu, 0x0A080708u, 0x0C0B0A0Au, 0x4C522207u,
+    0x5A4A4C51u, 0x5A5A4F5Au, 0x1C141A33u, 0x3E4E5A3Cu, 0x5A4F5A4Fu, 0x1A1C3427u, 0x24223549u, 0x051B1F30u,
+    0x7F007F00u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x007F007Fu,
+    0x301F1B05u, 0x04122424u, 0x06060605u, 0x0B0A0805u, 0x0F0C0C0Du, 0x0C0C0F0Fu, 0x0C0B0A0Au, 0x4C552207u,
+    0x4F4A4C52u, 0x1A335A5Au, 0x5A3B1C14u, 0x4F4A4F4Fu, 0x5A4F4F5Au, 0x1A1C3427u, 0x2422354Eu, 0x051B1F30u,
+    0x7F007F00u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x007F007Fu,
+    0x301F1B05u, 0x04122424u, 0x0F0B0606u, 0x0C0E0F0Au, 0x0706080Cu, 0x0F19120Au, 0x0C0B0B08u, 0x4C552207u,
+    0x4F3E4C51u, 0x1C141C36u, 0x4F4F4F34u, 0x4A4F4F4Fu, 0x4E4F4A27u, 0x1C1C4A36u, 0x2424354Eu, 0x061D1F30u,
+    0x7F007F00u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x007F007Fu,
+    0x301F1D06u, 0x04122D24u, 0x08080506u, 0x0E0F1512u, 0x0C111211u, 0x12120808u, 0x0C0B0A08u, 0x4C552207u,
+    0x4E3E4C52u, 0x28141427u, 0x4A4A4E4Eu, 0x364F4F4Fu, 0x4E4E3314u, 0x1C1A5A4Eu, 0x2D22355Au, 0x0C1B1F30u,
+    0x7F007F02u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x027F007Fu,
+    0x301F1B0Eu, 0x0412242Du, 0x12040606u, 0x06060819u, 0x110C0705u, 0x12070A11u, 0x0C0B0C12u, 0x4C522207u,
+    0x4E3E4C4Cu, 0x141E3A4Eu, 0x4E4E3416u, 0x4A4F4A4Au, 0x4E4E4A36u, 0x1C1C5A4Eu, 0x2622355Au, 0x0F1D222Du,
+    0x7F007F02u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x027F007Fu,
+    0x2D221D0Fu, 0x04122424u, 0x15110506u, 0x0F060506u, 0x0D06070Eu, 0x0B0E0D0Fu, 0x0C0A1512u, 0x4C552207u,
+    0x3A3B524Cu, 0x30494E3Au, 0x3A1C141Au, 0x4F4A4A4Eu, 0x4E4E4F4Fu, 0x1C1C5A4Eu, 0x2D23355Au, 0x0F1D2230u,
+    0x7F007F02u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x027F007Fu,
+    0x30221D0Fu, 0x04122828u, 0x04150704u, 0x12111108u, 0x11061515u, 0x0C120C11u, 0x0C12110Bu, 0x4B562207u,
+    0x4E3C524Cu, 0x493A3A4Eu, 0x14142039u, 0x4A4F4A27u, 0x4E4E4F4Au, 0x1C1C5A4Eu, 0x2D23355Au, 0x0E1D2234u,
+    0x7F007F00u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x007F007Fu,
+    0x30221D0Eu, 0x04122828u, 0x12151F15u, 0x1B22302Fu, 0x120A1212u, 0x0B0E0D15u, 0x12120B0Au, 0x4C5C220Au,
+    0x3A3A4C52u, 0x35353A3Au, 0x1E3A4939u, 0x4F271414u, 0x4E4F4A4Fu, 0x1A1C4E4Eu, 0x2D24355Au, 0x0E1F2234u,
+    0x7F007F00u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x007F007Fu,
+    0x30221F0Eu, 0x12112D2Du, 0x30263636u, 0x341B2236u, 0x12061130u, 0x0E110F0Eu, 0x150E0A0Du, 0x4C55220Eu,
+    0x3A3B5252u, 0x39393A3Au, 0x39392625u, 0x1A141C30u, 0x4E4F5A36u, 0x1C1A5A4Eu, 0x2D24355Au, 0x111F2234u,
+    0x7F007F00u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x007F007Fu,
+    0x34221F11u, 0x1B122D2Du, 0x2D0D263Cu, 0x34151F3Bu, 0x19121F2Du, 0x0C080A0Au, 0x120C0A0Du, 0x4C5C220Cu,
+    0x3A3B5252u, 0x2539353Au, 0x2631311Fu, 0x1A334E39u, 0x5A4A1C14u, 0x1C1A4E4Eu, 0x2F24355Au, 0x111F2334u,
+    0x7F007F00u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x007F007Fu,
+    0x34231F11u, 0x1F122D2Du, 0x24040E3Cu, 0x361F1934u, 0x1F120E19u, 0x0D0F1D1Fu, 0x120A0F15u, 0x525C220Eu,
+    0x3A3B5551u, 0x1F25353Au, 0x2615191Bu, 0x4F4E3A3Au, 0x27141427u, 0x1C1A5A4Eu, 0x2F24355Au, 0x151F2234u,
+    0x7F007F02u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x027F007Fu,
+    0x34221F12u, 0x11122D2Du, 0x0F121523u, 0x11191B1Du, 0x190B0707u, 0x11191219u, 0x0F111108u, 0x4C5F2208u,
+    0x3A3B5252u, 0x25263A3Au, 0x321F191Bu, 0x4A3E3A3Au, 0x141C4A5Au, 0x1C1C3616u, 0x3024354Eu, 0x12222334u,
+    0x7F007F00u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x007F007Fu,
+    0x34232212u, 0x04122D2Du, 0x0D0F1507u, 0x07060B0Fu, 0x190B0A08u, 0x1515110Bu, 0x120F0D0Du, 0x525C220Bu,
+    0x35365252u, 0x25353A3Au, 0x35321F1Du, 0x4A4F3A35u, 0x3B5A4F4Au, 0x1C14141Au, 0x2F24354Eu, 0x15222434u,
+    0x7F007F00u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x007F007Fu,
+    0x34242215u, 0x05122F2Du, 0x050D1507u, 0x0A061212u, 0x0E070808u, 0x12191219u, 0x120E0B0Fu, 0x525C220Eu,
+    0x353B5552u, 0x2535353Au, 0x3E352525u, 0x4F4F4A3Au, 0x4E4F4F4Fu, 0x1C163049u, 0x3028354Eu, 0x19222436u,
+    0x7F007F04u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x047F007Fu,
+    0x36242219u, 0x05153030u, 0x121F1908u, 0x0A0C1507u, 0x0B0A0A08u, 0x0B151B11u, 0x120C0C0Bu, 0x525F2208u,
+    0x393A5652u, 0x35353535u, 0x4A3A3535u, 0x4F4F4F4Au, 0x4E4F4F4Fu, 0x35494949u, 0x30283949u, 0x19222436u,
+    0x7F007F04u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x047F007Fu,
+    0x36242219u, 0x05153030u, 0x363C1206u, 0x0E11080Fu, 0x120B0A07u, 0x0F0F1215u, 0x0F120E0Du, 0x52622208u,
+    0x393A5554u, 0x2635353Au, 0x4A4A4A35u, 0x4F4F4F4Au, 0x4E4E4F4Fu, 0x49393249u, 0x30283949u, 0x19232436u,
+    0x7F007F02u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x027F007Fu,
+    0x36242319u, 0x05153030u, 0x56260A07u, 0x0B0A0834u, 0x0B0A0A08u, 0x0F0D1911u, 0x0C0F120Fu, 0x525F2208u,
+    0x323A5552u, 0x3A3A3535u, 0x4F4F4A3Au, 0x4F4F4F4Fu, 0x4E4E4E4Fu, 0x49494949u, 0x34283949u, 0x1922263Bu,
+    0x7F007F02u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x027F007Fu,
+    0x3B262219u, 0x05153430u, 0x1D150F07u, 0x070F1926u, 0x0A0A0A0Au, 0x08151F0Au, 0x0D0B0F12u, 0x525F2308u,
+    0x393A5556u, 0x3A3A3539u, 0x4F4F4A3Au, 0x4F4E4F4Fu, 0x4E4E4E4Fu, 0x4E4E4949u, 0x302D394Eu, 0x1B242836u,
+    0x7F007F03u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x037F007Fu,
+    0x362D241Bu, 0x05153430u, 0x0C150F07u, 0x0712150Eu, 0x0B0A0B0Au, 0x151D1907u, 0x0E0C0B0Fu, 0x555F2308u,
+    0x393E5855u, 0x4A3E3539u, 0x4F4F4F3Eu, 0x4E4E4F4Fu, 0x4E4E4E4Eu, 0x4E4E4E49u, 0x342D3A4Eu, 0x1B242D36u,
+    0x7F007F03u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x037F007Fu,
+    0x362D241Bu, 0x05153434u, 0x0D110C06u, 0x0E120D0Du, 0x0C0B0808u, 0x15151907u, 0x0E0D0A0Du, 0x52622308u,
+    0x393E5C56u, 0x4F4A3A39u, 0x4F4A4F4Fu, 0x4E494E4Eu, 0x494E4949u, 0x4E4E4E4Eu, 0x34303A4Eu, 0x1B282D3Cu,
+    0x7F007F04u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x047F007Fu,
+    0x3C2D281Bu, 0x07153434u, 0x0612110Fu, 0x0C0D0A0Bu, 0x11120F0Cu, 0x0F12150Au, 0x0B0E111Bu, 0x55622408u,
+    0x393E5856u, 0x4F4F4E3Au, 0x4F4F5151u, 0x3949494Eu, 0x49493939u, 0x4E4E4E4Eu, 0x34303A4Eu, 0x1D24303Cu,
+    0x7F017F07u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x077F017Fu,
+    0x3C30241Du, 0x151B3434u, 0x0E191212u, 0x07080812u, 0x0F191212u, 0x0B12150Du, 0x19191B19u, 0x5562230Du,
+    0x493E5C56u, 0x514F4F4Eu, 0x4F515353u, 0x39494E4Eu, 0x4E494939u, 0x4E494E4Eu, 0x34343A4Eu, 0x1F28343Bu,
+    0x7F7E7F07u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x077F7E7Fu,
+    0x3B30281Fu, 0x06193634u, 0x19110F0Eu, 0x0A0D1519u, 0x0C19070Bu, 0x0F121215u, 0x15121B0Fu, 0x55622615u,
+    0x4E3E5C58u, 0x5353514Fu, 0x4F515454u, 0x494E4F4Fu, 0x4E494E49u, 0x4E5A4E4Eu, 0x34343A4Eu, 0x1F28343Cu,
+    0x7F7F7F09u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x097F7E7Fu,
+    0x3C302D1Fu, 0x0F153B34u, 0x0A060819u, 0x0D152222u, 0x12080C0Bu, 0x0F120F1Bu, 0x0F111508u, 0x5562260Fu,
+    0x4F4A5C5Fu, 0x5454514Fu, 0x60546154u, 0x494E4E4Fu, 0x4E495A4Eu, 0x4E5A4E4Eu, 0x36343A4Eu, 0x1F2D343Cu,
+    0x7F7F7F12u, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x127F017Fu,
+    0x3C342D1Fu, 0x05153B34u, 0x0C0F120Fu, 0x0A0B120Fu, 0x15110A0Bu, 0x11120A15u, 0x0B15120Au, 0x5666230Au,
+    0x4F4A5C5Fu, 0x57575351u, 0x60615753u, 0x5A5A5A4Fu, 0x5A5A4E4Eu, 0x5A5A5A5Au, 0x3634494Eu, 0x222D344Bu,
+    0x7F7F7F12u, 0x7D7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7D7F7F7Fu, 0x7D7F7D7Fu, 0x7D7D7D7Du, 0x7D7D7D7Du,
+    0x7D7D7D7Du, 0x7F7D7D7Du, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7D7D7F7Fu, 0x7D7D7D7Du,
+    0x7D7D7D7Du, 0x7D7D7D7Du, 0x7F7F7F7Du, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu,
+    0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7F7Fu, 0x7F7F7D7Du, 0x197F7F7Fu,
+    0x4B342D22u, 0x05153B36u, 0x0C0F1207u, 0x0A121119u, 0x120B0C0Bu, 0x11120812u, 0x0F190C0Cu, 0x5C66230Au,
+    0x5A4A565Fu, 0x61545353u, 0x60575757u, 0x5A5A5A5Au, 0x5A5A5A5Au, 0x5A5A5A5Au, 0x3B36394Eu, 0x2230344Bu,
+    0x34597136u, 0x2D221F24u, 0x524B3C34u, 0x5F5B5B5Bu, 0x5F5F5B5Fu, 0x5F5B5F5Bu, 0x5F5F5F5Fu, 0x5B5F5B5Fu,
+    0x5B5B5F5Bu, 0x5F5B5F5Fu, 0x5B5B5B5Bu, 0x5B5B5B5Bu, 0x57575B5Fu, 0x53575357u, 0x53535352u, 0x52525352u,
+    0x52525252u, 0x52535252u, 0x57535353u, 0x57575357u, 0x57575757u, 0x5B575757u, 0x5B5B5B57u, 0x57575753u,
+    0x57535757u, 0x57575757u, 0x57575757u, 0x5B5B575Bu, 0x5757575Bu, 0x52535753u, 0x52525252u, 0x52525252u,
+    0x53525352u, 0x53535757u, 0x57575353u, 0x575B5753u, 0x5B575B57u, 0x5F5F5B5Bu, 0x52575B5Fu, 0x4B4B5151u,
+    0x3B3B3C4Bu, 0x34343436u, 0x26262F2Fu, 0x23242426u, 0x1B1F1F1Fu, 0x0A0F1519u, 0x03020305u, 0x19120B0Fu,
+    0x4B343023u, 0x07153B36u, 0x0F070E12u, 0x0A120B15u, 0x150B0C0Bu, 0x1112080Du, 0x15150C0Du, 0x5C622407u,
+    0x604B585Fu, 0x57605351u, 0x60616157u, 0x5A606060u, 0x5A5A5A5Au, 0x5A5A5A5Au, 0x3B36394Eu, 0x2234344Bu,
+    0x224B6836u, 0x34261F1Fu, 0x57514B3Bu, 0x57575757u, 0x575B575Bu, 0x5B5B5757u, 0x5F5B5B5Bu, 0x5B5B5B5Bu,
+    0x57575757u, 0x5B575B57u, 0x5B5B575Bu, 0x5F5B5B5Bu, 0x5B5B5B5Fu, 0x5B5B5B5Bu, 0x5B5B5757u, 0x5B575B5Bu,
+    0x5B5B5B5Bu, 0x5B5B5F5Fu, 0x5B5B5B5Bu, 0x5B575757u, 0x575B5757u, 0x5B5B5B57u, 0x5B5F5B5Bu, 0x575B5B5Bu,
+    0x57575757u, 0x5B5B575Bu, 0x5B5B5757u, 0x5F5B5B5Bu, 0x5B5B5B57u, 0x575B575Bu, 0x5B5B5B57u, 0x5B57575Bu,
+    0x5F5B5B5Bu, 0x5B5B5F5Fu, 0x5B5B5B5Bu, 0x5B5B5757u, 0x57575B5Bu, 0x5B5B5B5Bu, 0x5252575Fu, 0x4B4B4C51u,
+    0x363B3B3Cu, 0x2F343436u, 0x26262D2Du, 0x1F222324u, 0x1D1D1F1Fu, 0x0E121919u, 0x0202040Au, 0x15060303u,
+    0x4B343424u, 0x0F153C3Bu, 0x0F0B0812u, 0x0D15080Fu, 0x15120B0Cu, 0x1112120Au, 0x1D0F0B0Cu, 0x5C62240Au,
+    0x534A5F5Fu, 0x60606060u, 0x61616160u, 0x60606161u, 0x5A5A5A60u, 0x5A5A4E4Eu, 0x3B36495Au, 0x2234364Bu,
+    0x1F305234u, 0x3C36261Fu, 0x5757524Bu, 0x57575454u, 0x57575457u, 0x57575757u, 0x5B575757u, 0x575B575Bu,
+    0x54545457u, 0x54545457u, 0x575B5757u, 0x57545757u, 0x5757575Bu, 0x57575457u, 0x54575754u, 0x5B575754u,
+    0x54575457u, 0x5B575B57u, 0x57575757u, 0x57575757u, 0x57575757u, 0x5754575Bu, 0x57575457u, 0x5457575Bu,
+    0x57575454u, 0x57575757u, 0x57575757u, 0x57545757u, 0x5B575B5Bu, 0x54575757u, 0x54545457u, 0x575B5757u,
+    0x54575754u, 0x575B5757u, 0x57575757u, 0x54575457u, 0x57575754u, 0x57575457u, 0x52525454u, 0x3C4B4C51u,
+    0x363B3C3Cu, 0x30343436u, 0x26262D2Fu, 0x22232224u, 0x1D1F1F22u, 0x19191D1Fu, 0x03061112u, 0x12030203u,
+    0x4B363024u, 0x08153C3Bu, 0x0F06060Fu, 0x0F120519u, 0x08190707u, 0x0F19150Fu, 0x11191508u, 0x5C662407u,
+    0x4B51625Fu, 0x4B515151u, 0x4B4B4B4Bu, 0x4A4A4B4Au, 0x4A4A4A3Cu, 0x3B3E3E3Eu, 0x3C3B363Au, 0x2336363Cu,
+    0x261D2F2Du, 0x5F524C36u, 0x65686862u, 0x68686568u, 0x68686868u, 0x68686865u, 0x68686868u, 0x68686568u,
+    0x68686565u, 0x68656568u, 0x68686868u, 0x68686868u, 0x68686868u, 0x68686565u, 0x68686865u, 0x68656868u,
+    0x68686868u, 0x68686868u, 0x68656868u, 0x65686868u, 0x68686865u, 0x68686868u, 0x68686868u, 0x65686868u,
+    0x68686865u, 0x68686868u, 0x68686868u, 0x68686868u, 0x68686868u, 0x65656865u, 0x68656868u, 0x68686868u,
+    0x68686868u, 0x68686868u, 0x68686568u, 0x68686865u, 0x68656865u, 0x68686868u, 0x62656568u, 0x5F5F6262u,
+    0x51525357u, 0x3C4B4B4Cu, 0x3436363Bu, 0x262D2F34u, 0x1F232324u, 0x1B1F2222u, 0x040F1219u, 0x08020202u,
+    0x3C36342Du, 0x1F2F3B3Cu, 0x221F1F22u, 0x2322222Du, 0x1F2D221Fu, 0x242F222Du, 0x22243624u, 0x5F624C24u,
+    0x5F5F5F62u, 0x56565656u, 0x52525558u, 0x4C4C4C52u, 0x4B4B4B4Cu, 0x3C3C4B4Bu, 0x3C3B3C3Cu, 0x2836364Cu,
+    0x3B1F1D1Fu, 0x756D655Fu, 0x7A7A7A7Du, 0x7A7A757Au, 0x7A7A7A7Au, 0x7A7A7A7Au, 0x7A7A7575u, 0x7A7A7A7Au,
+    0x7A757A7Au, 0x7A7A7A7Au, 0x7A7A7A7Au, 0x7A7A7A7Au, 0x7A7A7A7Au, 0x7A7A7A75u, 0x7A7A7A7Au, 0x7A7A7A7Au,
+    0x7A7A7A7Au, 0x7A7A7A7Au, 0x7A757A7Au, 0x7A7A7A7Au, 0x7A7A7A7Au, 0x7A7A7A7Au, 0x7A7A7A7Au, 0x7A7A7A7Au,
+    0x7A7A757Au, 0x7A7A7A7Au, 0x7A7A7A7Au, 0x7A7A757Au, 0x7A7A7A7Au, 0x75757A7Au, 0x7A7A7A7Au, 0x7A7A7A7Au,
+    0x7A7A7A7Au, 0x7A7A7A7Au, 0x7A7A7575u, 0x7A7A7A7Au, 0x7A7A7A7Au, 0x7A7A7A7Au, 0x71757A7Au, 0x6D6D6D6Du,
+    0x6265686Cu, 0x52575F62u, 0x363C3C4Cu, 0x262D3034u, 0x1D1F1F24u, 0x191F1F1Du, 0x03060F15u, 0x05000202u,
+    0x4C363434u, 0x4B3C3B3Cu, 0x524C4C4Bu, 0x5252524Cu, 0x5C555655u, 0x625F5F5Cu, 0x62625F62u, 0x625F6269u,
+    0x61616262u, 0x55555C5Fu, 0x5253555Cu, 0x52525253u, 0x4B4C4C4Cu, 0x4B3C4B4Bu, 0x3C3C3C3Cu, 0x2D36364Cu,
+    0x5F3B1F1Du, 0x756D6C62u, 0x71757575u, 0x75717575u, 0x75717575u, 0x75757575u, 0x71757575u, 0x75757575u,
+    0x75717571u, 0x75757175u, 0x75757575u, 0x75757575u, 0x75757575u, 0x71757175u, 0x75757571u, 0x75757575u,
+    0x75757175u, 0x75757575u, 0x71717575u, 0x75757175u, 0x75757571u, 0x75757575u, 0x75757575u, 0x71757575u,
+    0x75717575u, 0x71717575u, 0x75757575u, 0x71757575u, 0x75757575u, 0x71717571u, 0x75717575u, 0x75757575u,
+    0x75757575u, 0x75757571u, 0x75717175u, 0x75757571u, 0x75757575u, 0x75757175u, 0x6E717175u, 0x6C6C6D6Du,
+    0x62656568u, 0x52545F5Fu, 0x3B3C4B51u, 0x2D2D3436u, 0x1D222226u, 0x1F1D1D1Du, 0x070F121Bu, 0x0B020205u,
+    0x4C363434u, 0x3C3C3C3Cu, 0x4B3C3C3Cu, 0x4C4B4B4Bu, 0x524C4C4Cu, 0x56525252u, 0x56565552u, 0x62625F5Fu
+);
+
+// ── Decode helpers ──────────────────────────────────────────────────────────
+
+// Return the palette index at pixel (px, py)
+int bezelIndex(int px, int py) {
+    int  linear = py * BEZEL_W + px;
+    int  slot   = linear >> 2;          // which uint
+    int  shift  = (linear & 3) << 3;   // bit offset within uint (0,8,16,24)
+    return int((bezelData[slot] >> shift) & 0xFFu);
+}
+
+// Sample the bezel at normalised UV [0,1]×[0,1] — nearest-neighbour
+float4 sampleBezel(float2 uv) {
+    // Clamp UV to valid range
+    uv = clamp(uv, 0.0, 1.0);
+    int px  = int(uv.x * float(BEZEL_W - 1) + 0.5);
+    int py  = int(uv.y * float(BEZEL_H - 1) + 0.5);
+    px      = clamp(px, 0, BEZEL_W - 1);
+    py      = clamp(py, 0, BEZEL_H - 1);
+    int idx = bezelIndex(px, py);
+    return float4(bezelPalette[idx], bezelAlpha[idx]);
+}
+
+// Bilinear-interpolated sample (smoother, ~4× the index lookups)
+float4 sampleBezelBilinear(float2 uv) {
+    uv      = clamp(uv, 0.0, 1.0);
+    float fx = uv.x * float(BEZEL_W - 1);
+    float fy = uv.y * float(BEZEL_H - 1);
+    int   x0 = int(fx);
+    int   y0 = int(fy);
+    int   x1 = min(x0 + 1, BEZEL_W - 1);
+    int   y1 = min(y0 + 1, BEZEL_H - 1);
+    float tx = fx - float(x0);
+    float ty = fy - float(y0);
+
+    int i00 = bezelIndex(x0, y0);
+    int i10 = bezelIndex(x1, y0);
+    int i01 = bezelIndex(x0, y1);
+    int i11 = bezelIndex(x1, y1);
+
+    float4 c00 = float4(bezelPalette[i00], bezelAlpha[i00]);
+    float4 c10 = float4(bezelPalette[i10], bezelAlpha[i10]);
+    float4 c01 = float4(bezelPalette[i01], bezelAlpha[i01]);
+    float4 c11 = float4(bezelPalette[i11], bezelAlpha[i11]);
+
+    float4 top = lerp(c00, c10, tx);
+    float4 bot = lerp(c01, c11, tx);
+    return lerp(top, bot, ty);
+}
+
+// True when pixel is more than half opaque (use to skip game rendering)
+bool bezelIsOpaque(float2 uv) {
+    return sampleBezel(uv).a > 0.5;
+}
+
+// ___________________________________________________________________________
+void main()
+{
+    // _______________________________________________________________________
+    // 1. SYSTEM BASICS
+    // _______________________________________________________________________
+    float2 uv_raw = GetCoordinates();
+
+    // BYPASS GUARD – exit immediately when the main toggle is off.
+    if (A_GAMEFRAME < 0.5) {
+        SetOutput(SampleLocation(uv_raw));
+        return;
+    }
+
+    float2 res    = GetResolution();
+    float2 invRes = 1.0 / res;
+    float  time   = GetTime();
+
+    // HARD OSCILLATOR: sign-sine wave prevents Vulkan driver from
+    // constant-folding the interlace toggle across frames.
+    float toggle     = sign(sin(time * 60.0));
+    float frameToggle = fma(toggle, 0.5, 0.5);   // toggle * 0.5 + 0.5
+
+    // _______________________________________________________________________
+    // 4. TUBE GEOMETRY & CURVATURE
+    // _______________________________________________________________________
+
+    // Stable bezel warp (always from uv_raw)
+    float2 centered_bezel = (uv_raw - 0.5) * 2.0;
+    float2 bB_bezel       = centered_bezel.yx * centered_bezel.yx;
+    float2 warpedUV       = fma(centered_bezel * fma(bB_bezel, float2(A_06_BULGE), float2(1.0)), float2(0.5), float2(0.5));
+
+    // Jittered game warp
+    float2 uv = uv_raw;
+    if (A_13_T_INTERLACE > 0.5) {
+        uv.y += toggle * (A_14_JITTER * invRes.y * 1.5);
+    }
+
+    // Vertical hold instability.
+    if (M_MISC > 0.5 && M_14_VHOLD > 0.0) {
+        float vroll = sin(time * M_15_VHOLD_SPEED) * M_14_VHOLD * 0.12;
+        uv.y = fract(uv.y + vroll);
+    }
+    float2 centered_game = (uv - 0.5) * 2.0;
+    float2 bB_game       = centered_game.yx * centered_game.yx;
+    float2 gameWarpedUV  = fma(centered_game * fma(bB_game, float2(A_06_BULGE), float2(1.0)), float2(0.5), float2(0.5));
+
+    // When the bezel is disabled, collapse all insets to zero so the game
+    float baseInset  = (B_BEZEL > 0.5) ? B_02_BORDER : 0.0;
+    float invScale   = 1.0 / (1.0 - baseInset * 2.0);
+
+    // Game image uses the JITTERED warp – the picture shifts inside the frame.
+    float2 scaledUV  = (gameWarpedUV - baseInset) * invScale;
+    scaledUV = fma(scaledUV, float2(1.0 - A_29_CROP * 2.0), float2(A_29_CROP));
+
+    float effectiveFrame = (B_BEZEL > 0.5) ? B_07_FRAME : 0.0;
+    float totalInset     = baseInset + effectiveFrame;
+
+    // Glass refraction – uses STABLE warpedUV so the lens shape
+    // doesn't jump with interlace bob.
+    float2 tubeUV = scaledUV;
+    if (T_TUBEGLASS > 0.5) {
+        float2 screenOffset   = warpedUV - 0.5;
+        float  distFromCenter = length(screenOffset);
+
+        float2 uvClamped  = clamp(scaledUV, 0.0, 1.0);
+        float  insideGame = float(uvClamped == scaledUV);
+
+        float  edgeFalloff   = smoothstep(0.48, 0.25, distFromCenter);
+        float2 refractOffset = screenOffset * (dot(screenOffset, screenOffset) * T_01_REFRACT * edgeFalloff * insideGame);
+        tubeUV += refractOffset * invScale;
+    }
+
+    float2 tubeOffset = tubeUV - 0.5;
+
+    // _______________________________________________________________________
+    // 5. BEZEL CLIPPING & COLORS
+    // _______________________________________________________________________
+    // A_00_FORCE_43 – pull the entire bezel frame (outer edge + screen hole) inward
+    // horizontally to wrap tightly around a 4:3 game window inside the 16:9 output.
+    // active = (4/3)/(16/9) = 0.75 → pillar bands = 0.125 each side in UV space.
+    // Both d_outer and d_game use the narrowed X inset so:
+    //   • pixels in the side strips (d_outer > 0) → render as bezel plastic colour
+    //   • pixels in the thin inner frame (d_game > 0, d_outer <= 0) → black
+    //   • pixels inside the game hole → game content
+    float outerInsetX = baseInset;
+    float outerInsetY = baseInset;
+    float gameInsetX  = totalInset;
+    float gameInsetY  = totalInset;
+    if (A_00_FORCE_43 > 0.5) {
+        float activeWidth  = (4.0 / 3.0) / (16.0 / 9.0); // 0.75
+        float pillarMargin = (1.0 - activeWidth) * 0.5;   // 0.125
+
+        outerInsetX = baseInset  + pillarMargin;
+        gameInsetX  = totalInset + pillarMargin;
+
+        // Remap scaledUV/tubeUV so game texture fills the narrower 4:3 window
+        scaledUV.x = (scaledUV.x - pillarMargin) / activeWidth;
+        tubeUV.x   = (tubeUV.x   - pillarMargin) / activeWidth;
+    }
+
+    float d_outer = getSDistXY(warpedUV, B_01_CORNER_R, outerInsetX, outerInsetY);
+    float d_game  = getSDistXY(warpedUV, B_01_CORNER_R, gameInsetX,  gameInsetY);
+
+    if (B_BEZEL > 0.5) {
+        if (d_outer > 0.0) {
+            int   colorIdx = clamp(int(B_04_BEZEL_COL), 0, 4);
+            float3 bC      = bezelColor(colorIdx);
+
+            float grain = fma(hash(uv_raw * 1.5), B_03_BEZEL_GRAIN, -0.5 * B_03_BEZEL_GRAIN);
+            bC += grain;
+
+            // ── Speaker grille (4:3 mode only, side pillarbox strips) ──────────
+            // Style reference: flat rectangular mesh grille as seen on arcade CRT
+            // monitors (e.g. Sega F-Zero AX cab) — fine square dot grid, sits
+            // flush/slightly inset, thin bright plastic border around panel edge.
+            if (A_00_FORCE_43 > 0.5) {
+                float activeWidth  = (4.0 / 3.0) / (16.0 / 9.0);
+                float pillarMargin = (1.0 - activeWidth) * 0.5;  // 0.125
+
+                bool inLeftPillar  = warpedUV.x < pillarMargin;
+                bool inRightPillar = warpedUV.x > (1.0 - pillarMargin);
+
+                if (inLeftPillar || inRightPillar) {
+                    // Normalise x [0→1] from screen-edge inward, same direction both sides
+                    float stripX = inLeftPillar
+                        ? warpedUV.x / pillarMargin
+                        : (1.0 - warpedUV.x) / pillarMargin;
+                    float stripY = warpedUV.y;
+
+                    // Grille panel bounds within the strip (leaves bezel border top/bot/sides)
+                    float grilleL = 0.12;
+                    float grilleR = 0.88;
+                    float grilleT = 0.18;
+                    float grilleB = 0.82;
+
+                    bool inPanel = stripX > grilleL && stripX < grilleR &&
+                                   stripY > grilleT && stripY < grilleB;
+
+                    if (inPanel) {
+                        // Normalise inside the panel
+                        float gX = (stripX - grilleL) / (grilleR - grilleL);
+                        float gY = (stripY - grilleT) / (grilleB - grilleT);
+
+                        // ── Thin bright plastic border around panel ──────────
+                        float borderW = 0.025;
+                        float inBorder = float(gX < borderW || gX > 1.0 - borderW ||
+                                               gY < borderW || gY > 1.0 - borderW);
+                        // Border highlight: lighter grey plastic trim
+                        float borderLight = smoothstep(0.0, borderW, min(min(gX, 1.0 - gX),
+                                                                          min(gY, 1.0 - gY)));
+                        // bevel: bright on top-left, dark on bottom-right (lit from TL)
+                        float bevelLight = (gX + (1.0 - gY)) * 0.5;
+                        float3 borderCol = bC * (1.1 + bevelLight * 0.3);
+                        bC = lerp(borderCol, bC, borderLight);
+
+                        // ── Mesh area (inside the border) ───────────────────
+                        float meshL = borderW;
+                        float meshR = 1.0 - borderW;
+                        float meshT = borderW;
+                        float meshB = 1.0 - borderW;
+                        bool inMesh = gX > meshL && gX < meshR &&
+                                      gY > meshT && gY < meshB;
+
+                        if (inMesh) {
+                            // Map mesh coords to pixel-space using screen resolution
+                            // so dot density is consistent regardless of output size.
+                            // Target ~one dot per ~5px at 1080p → dotFreq ≈ 220
+                            float dotFreq = 180.0;
+                            float aspect  = res.x / res.y;  // e.g. 1.777 for 16:9
+
+                            // Account for strip being narrow in x relative to full width
+                            float stripWidthFrac  = pillarMargin;
+                            float panelWidthFrac  = (grilleR - grilleL) * stripWidthFrac;
+                            float panelHeightFrac = (grilleB - grilleT);
+
+                            float2 dotUV = float2(
+                                gX * dotFreq * panelWidthFrac  * aspect,
+                                gY * dotFreq * panelHeightFrac
+                            );
+
+                            float2 dotCell = fract(dotUV) - 0.5; // centre each cell
+                            float  dotDist = length(dotCell);
+
+                            // Square holes with slightly rounded corners:
+                            // use Chebyshev + circular blend
+                            float cheb   = max(abs(dotCell.x), abs(dotCell.y));
+                            float circle = dotDist;
+                            float hole   = lerp(cheb, circle, 0.4); // 0 = centre, 0.5 = edge
+
+                            float holeRadius = 0.30; // fraction of cell half-width
+                            float holeMask   = smoothstep(holeRadius + 0.04,
+                                                          holeRadius - 0.04, hole);
+                            // holeMask: 1.0 = inside hole, 0.0 = bridge
+
+                            // Dark backing seen through holes (near-black with slight warmth)
+                            float3 backing = float3(0.030, 0.028, 0.024);
+
+                            // Very subtle rim shading on hole interior edge
+                            float rimDark = smoothstep(holeRadius - 0.04,
+                                                       holeRadius - 0.14, hole);
+                            backing += rimDark * 0.018;
+
+                            // Bridge surface: match bezel colour but slightly darker (inset)
+                            float3 bridge = bC * 0.82;
+
+                            // Shallow top-lit sheen on bridge surface
+                            float bridgeSheen = smoothstep(0.5, 0.2, dotCell.y + 0.5) * 0.06;
+                            bridge += bridgeSheen;
+
+                            bC = lerp(bridge, backing, holeMask);
+
+                            // Slight overall shadow inside panel vs surrounding bezel
+                            // (panel is flush-recessed like on real hardware)
+                            bC *= 0.88;
+                        }
+                    }
+                }
+            }
+            // ── End speaker grille ────────────────────────────────────────────
+
+            // Subtle screen reflection on bezel — use 4:3-aware insets in 4:3 mode
+            float reflInsetX = (A_00_FORCE_43 > 0.5) ? gameInsetX : totalInset;
+            float reflInsetY = gameInsetY;
+            float2 toCenter   = 0.5 - warpedUV;
+            float  distToEdge = max(abs(toCenter.x) - (0.5 - reflInsetX),
+                                    abs(toCenter.y) - (0.5 - reflInsetY));
+
+            if (distToEdge > 0.0 && distToEdge < 0.05) {
+                float2 reflectUV = warpedUV;
+
+                // Push toward nearest screen edge using 4:3-aware insets
+                if (abs(toCenter.x) / (0.5 - reflInsetX) > abs(toCenter.y) / (0.5 - reflInsetY)) {
+                    reflectUV.x = (toCenter.x > 0.0) ? reflInsetX + 0.05 : 1.0 - reflInsetX - 0.05;
+                } else {
+                    reflectUV.y = (toCenter.y > 0.0) ? reflInsetY + 0.05 : 1.0 - reflInsetY - 0.05;
+                }
+
+                float2 gameReflectUV = float2(
+                    (reflectUV.x - reflInsetX) / (1.0 - reflInsetX * 2.0),
+                    (reflectUV.y - reflInsetY) / (1.0 - reflInsetY * 2.0)
+                );
+
+                float3 reflection = float3(0.0);
+                if (B_06_BEZEL_REFLECT_BLUR < 0.1) {
+                    reflection = SampleLocation(gameReflectUV).rgb;
+                } else if (B_06_BEZEL_REFLECT_BLUR < 1.5) {
+                    float blurSize = 0.02 * B_06_BEZEL_REFLECT_BLUR;
+                    float2 bOff    = float2(blurSize, 0.0);
+                    float2 bOffY   = float2(0.0, blurSize);
+                    reflection =  SampleLocation(gameReflectUV).rgb          * 0.25;
+                    reflection += SampleLocation(gameReflectUV + bOff).rgb   * 0.1875;
+                    reflection += SampleLocation(gameReflectUV - bOff).rgb   * 0.1875;
+                    reflection += SampleLocation(gameReflectUV + bOffY).rgb  * 0.1875;
+                    reflection += SampleLocation(gameReflectUV - bOffY).rgb  * 0.1875;
+                } else {
+                    float  blurSize = 0.015 * B_06_BEZEL_REFLECT_BLUR;
+                    float2 b1 = float2(blurSize, 0.0);
+                    float2 b2 = float2(0.0,  blurSize);
+                    float2 b3 = float2(blurSize,  blurSize);
+                    float2 b4 = float2(-blurSize, blurSize);
+                    reflection =  SampleLocation(gameReflectUV).rgb       * 0.2;
+                    reflection += SampleLocation(gameReflectUV + b1).rgb  * 0.1;
+                    reflection += SampleLocation(gameReflectUV - b1).rgb  * 0.1;
+                    reflection += SampleLocation(gameReflectUV + b2).rgb  * 0.1;
+                    reflection += SampleLocation(gameReflectUV - b2).rgb  * 0.1;
+                    reflection += SampleLocation(gameReflectUV + b3).rgb  * 0.1;
+                    reflection += SampleLocation(gameReflectUV - b3).rgb  * 0.1;
+                    reflection += SampleLocation(gameReflectUV + b4).rgb  * 0.1;
+                    reflection += SampleLocation(gameReflectUV - b4).rgb  * 0.1;
+                }
+
+                float  reflectStrength = smoothstep(0.05, 0.0, distToEdge);
+                float  reflectLuma     = dot(reflection, float3(LUMA_R, LUMA_G, LUMA_B));
+                float  brightnessMask  = smoothstep(0.3, 0.7, reflectLuma);
+                bC = lerp(bC, fma(reflection, float3(0.15), bC), reflectStrength * brightnessMask);
+            }
+
+            // _________________________________________________________________
+            // BEZEL DIRECTIONAL LIGHT GRADIENT
+            // _________________________________________________________________
+            float2 bezelCentered = warpedUV - 0.5;
+            float3 lightDir      = normalize(float3(-0.6, 0.8, 0.0));
+            float  lightGrad     = dot(float3(bezelCentered, 0.0), lightDir);
+            // Remap: shadow side ~0.75, bright side ~1.25 — keeps midtone intact
+            float  lightMult     = 1.0 + lightGrad * 0.28;
+            bC *= lightMult;
+
+            SetOutput(float4(bC * (1.0 - d_outer), 1.0));
+            return;
+        }
+        if (d_game > 0.0) {
+            SetOutput(float4(0.0, 0.0, 0.0, 1.0));
+            return;
+        }
+    } else if (d_outer > 0.0) {
+        SetOutput(float4(0.0, 0.0, 0.0, 1.0));
+        return;
+    }
+
+    // _______________________________________________________________________
+    // 6. SIGNAL PROCESSING
+    // _______________________________________________________________________
+    float  dScale     = A_08_MASK_SCALE;
+    float  aspectRatio = res.x * invRes.y;
+    float2 loRes      = float2(A_01_RES * aspectRatio, A_01_RES);
+
+    float2 texUV = lerp(tubeUV, (floor(tubeUV * loRes) + 0.5) / loRes, A_02_SHARP);
+
+    // Isolated signal effects (M_MISC block)
+    if (M_MISC > 0.5) {
+        if (M_01_SYNC > 0.0)
+            texUV.x += fma(hash(float2(time, texUV.y)), 0.01 * M_01_SYNC, -0.005 * M_01_SYNC);
+
+        if (M_04_GEOM > 0.0) {
+            float uvYm  = texUV.y - 0.5;
+            float uvXm  = texUV.x - 0.5;
+            texUV.x += fma(uvYm, 0.02 * M_04_GEOM, texUV.y * 0.03 * M_04_GEOM * uvXm);
+        }
+
+        if (M_05_BREATH > 0.0) {
+            float3 breathSample = SampleLocation(float2(0.5)).rgb;
+            float  avgLuma      = dot(breathSample, float3(LUMA_R, LUMA_G, LUMA_B));
+            float  breathScale  = fma(avgLuma * 0.015, M_05_BREATH, 1.0);
+            texUV = fma(texUV - 0.5, float2(breathScale), float2(0.5));
+        }
+    }
+
+    if (M_03_FOCUS > 0.0)
+        texUV += (hash(texUV + time) - 0.5) * M_03_FOCUS * invRes;
+
+    // _______________________________________________________________________
+    // 7. CONVERGENCE & CHROMATIC ABERRATION
+    // _______________________________________________________________________
+    float  distSq    = dot(tubeOffset, tubeOffset);
+    float  conv      = (M_MISC > 0.5) ? (M_10_CONVERGE * invRes.x * 2.5) * distSq : 0.0;
+    float  chr       = (A_18_CHROMA   * invRes.x) * fma(pow(length(tubeOffset), 1.8), 1.0, 0.15);
+    float  totalOff  = conv + chr;
+    float2 offVec    = float2(totalOff, 0.0);
+
+    float3 tex;
+    tex.r = SampleLocation(texUV + offVec).r;
+    tex.g = SampleLocation(texUV).g;
+    tex.b = SampleLocation(texUV - offVec).b;
+
+    if (A_17_GHOST > 0.0)
+        tex = max(tex, SampleLocation(texUV - float2(4.0 * invRes.x, 0.0)).rgb * (A_17_GHOST * 0.4));
+
+    // M_16_EDGE_RING – NTSC luma/chroma overshoot & undershoot.
+    if (M_MISC > 0.5 && M_16_EDGE_RING > 0.0) {
+        float3 sL  = SampleLocation(texUV - float2(invRes.x, 0.0)).rgb;
+        float3 sR  = SampleLocation(texUV + float2(invRes.x, 0.0)).rgb;
+        // Second derivative — positive at dark-to-bright edges, negative at bright-to-dark
+        float3 ring = (tex * 2.0 - sL - sR) * M_16_EDGE_RING * 0.6;
+        tex = clamp(tex + ring, 0.0, 1.5);  // allow slight over-bright for realism
+    }
+
+    // A_24_T_SMOOTH – Temporal Smoothing approximation.
+    if (A_24_T_SMOOTH > 0) {
+        float  blurR  = float(A_24_T_SMOOTH) * invRes.x * 0.8;
+        float2 bx     = float2(blurR, 0.0);
+        float2 by     = float2(0.0,   blurR);
+        float2 bd     = float2(blurR, blurR) * 0.707;  // diagonal, same radius
+        // 9-tap weighted box: centre 0.36, axis 0.08 each (4×), diagonal 0.05 each (4×)
+        float3 tSmooth =  tex                                           * 0.36;
+        tSmooth       += SampleLocation(texUV + bx).rgb                 * 0.08;
+        tSmooth       += SampleLocation(texUV - bx).rgb                 * 0.08;
+        tSmooth       += SampleLocation(texUV + by).rgb                 * 0.08;
+        tSmooth       += SampleLocation(texUV - by).rgb                 * 0.08;
+        tSmooth       += SampleLocation(texUV + bd).rgb                 * 0.05;
+        tSmooth       += SampleLocation(texUV - bd).rgb                 * 0.05;
+        tSmooth       += SampleLocation(texUV + float2( blurR, -blurR) * 0.707).rgb * 0.05;
+        tSmooth       += SampleLocation(texUV + float2(-blurR,  blurR) * 0.707).rgb * 0.05;
+        tex = tSmooth;
+    }
+
+    // _______________________________________________________________________
+    // 8. COLOR & PERSISTENCE
+    // _______________________________________________________________________
+    float luma = dot(tex, float3(LUMA_R, LUMA_G, LUMA_B));
+
+    if (M_MISC > 0.5) {
+        if (M_09_MAG_TINT > 0.0) {
+            float stain = pow(length(tubeOffset), 2.5) * M_09_MAG_TINT;
+            tex.rb += stain * float2(0.3, 0.5);
+        }
+        if (M_08_AFTERGLOW > 0.0)
+            tex = max(tex, SampleLocation(tubeUV - float2(0.0, 1.5 * invRes.y)).rgb * (M_08_AFTERGLOW * 0.4));
+    }
+
+    // Purity -> saturation -> contrast pipeline (same math, hoisted constants)
+    float purityBlend = 1.0 - A_05_PURITY;
+    tex = lerp(tex, float3(luma), purityBlend);
+    tex = lerp(float3(luma), fma(tex - 0.5, float3(A_03_CONTRAST), float3(0.5)), A_04_SAT);
+
+    // A_31_TEMP – Colour temperature white-point bias.
+    // 0.0 = Warm 6500K  (slight red lift, blue cut  — "movie" mode on consumer TVs)
+    // 1.0 = Neutral      (no change)
+    // 2.0 = Cool 9300K   (blue lift, red cut — Japanese factory default for CRT TVs)
+    if (A_31_TEMP < 0.999 || A_31_TEMP > 1.001) {
+        float3 warm = tex * float3(1.08, 1.01, 0.88);   // 6500K: warm up
+        float3 cool = tex * float3(0.88, 0.97, 1.12);   // 9300K: blueshift
+        // blend: 0→warm, 1→neutral, 2→cool
+        float t = A_31_TEMP;
+        float3 neutralTex = tex;
+        tex = (t < 1.0) ? lerp(warm, neutralTex, t) : lerp(neutralTex, cool, t - 1.0);
+    }
+
+    // Gamma + black level in one pow call
+    float  gammaFactor = A_28_GAMMA * (1.0 / 2.2);
+    tex = pow(max(tex + A_26_BLACK, 0.0), float3(gammaFactor));
+
+    // A_32_DECAY – Phosphor colour decay (P22 persistence difference).
+    if (A_32_DECAY > 0.0) {
+        float3 prev = SampleLocation(tubeUV - float2(0.0, invRes.y)).rgb;
+        prev = pow(max(prev + A_26_BLACK, 0.0), float3(gammaFactor)); // match gamma
+        // Per-channel decay weights: R decays fastest, G slowest, B mid
+        float3 decayW = float3(0.15, 0.55, 0.35) * A_32_DECAY;
+        tex = max(tex, prev * decayW);
+    }
+
+    // Optional soft blur (5-tap Gaussian)
+    if (A_30_SOFT_BLUR > 0.0) {
+        float2 blurStep = invRes * (A_30_SOFT_BLUR * 0.5);
+        float3 blur  = tex * 0.4;
+        blur += SampleLocation(tubeUV + blurStep).rgb                    * 0.15;
+        blur += SampleLocation(tubeUV + float2(-blurStep.x,  blurStep.y)).rgb * 0.15;
+        blur += SampleLocation(tubeUV + float2( blurStep.x, -blurStep.y)).rgb * 0.15;
+        blur += SampleLocation(tubeUV - blurStep).rgb                    * 0.15;
+        tex = blur;
+    }
+
+    // _______________________________________________________________________
+    // 9. SCANLINES
+    // _______________________________________________________________________
+    float sDark      = A_11_SCAN_D * fma(-luma, M_11_BEAM_BLOOM, 1.0);
+    float scanDensity = res.y * A_12_SCAN_AMT * PI;
+
+    float scanPhase = (A_13_T_INTERLACE > 0.5) ? frameToggle * PI * A_14_JITTER : 0.0;
+    float scanPos   = fma(uv.y, scanDensity, scanPhase);
+    float scanCore  = sin(scanPos);
+    float scanShape = fma(0.3 * sin(scanPos * 2.0), 1.0 / 1.3, scanCore / 1.3);
+    float scanline  = lerp(1.0, fma(scanShape, 0.5, 0.5), sDark);
+
+    if (A_13_T_INTERLACE > 0.5) {
+        float rowCheck = mod(floor(uv_raw.y * res.y), 2.0);
+        float fieldDim = lerp(1.0, (frameToggle == rowCheck) ? 1.15 : 0.85, A_14_JITTER);
+        scanline *= fieldDim;
+    }
+
+    scanline *= fma(sin(fma(-time, 2.0, warpedUV.y * 12.0)), A_20_HUM, 1.0);
+
+    // _______________________________________________________________________
+    // 10. CRT MASK GENERATION
+    // _______________________________________________________________________
+    float3 msk = float3(1.0);
+
+    // Moiré shift
+    float lumaShift      = luma * A_21_SHIVER * 0.012;
+    float temporalSmooth = sin(time * 2.0) * (1.0 - A_22_SMOOTH);
+    float shiftAmount    = lumaShift + temporalSmooth * A_21_SHIVER * 0.003;
+    float2 moireUV       = tubeUV + float2(shiftAmount);
+
+    // A_23_BLOCK – quantise moireUV into a coarser grid before mask generation.
+    if (A_23_BLOCK > 1.0) {
+        float2 blockRes = res / A_23_BLOCK;
+        moireUV = (floor(moireUV * blockRes) + 0.5) / blockRes;
+    }
+
+    float2 mC = (moireUV * res) / dScale;
+
+    if (A_07_MASK_TYPE < 0.5) {
+        // Panasonic shadow mask
+        float stag    = mod(floor(mC.x * 0.33), 2.0) * A_10_STAGGER;
+        float triplet = mod(mC.x, 3.0);
+        if      (triplet < 1.0) msk = float3(1.8, 0.2, 0.2);
+        else if (triplet < 2.0) msk = float3(0.2, 1.8, 0.2);
+        else                    msk = float3(0.2, 0.2, 1.8);
+
+        float slotY    = fract(fma(mC.y, 0.24, stag * 0.5));
+        float slotMask = smoothstep(0.15, 0.25, slotY) * smoothstep(0.85, 0.75, slotY);
+        msk *= slotMask;
+
+    } else if (A_07_MASK_TYPE < 1.5) {
+        // Sony Trinitron aperture grille
+        float triplet = mod(mC.x, 3.0);
+        if      (triplet < 1.0) msk = float3(1.7, 0.25, 0.25);
+        else if (triplet < 2.0) msk = float3(0.25, 1.7, 0.25);
+        else                    msk = float3(0.25, 0.25, 1.7);
+        msk *= fma(sin(mC.y * 0.5), 0.05, 0.95);
+
+    } else if (A_07_MASK_TYPE < 2.5) {
+        // VGA dot mask
+        float2 grid   = fract(fma(mC, float2(0.5), float2(mod(floor(mC.y), 2.0) * 0.5, 0.0)));
+        float  dotDist = distance(grid, float2(0.5));
+        float  dotMask = smoothstep(0.45, 0.35, dotDist);
+        msk = fma(float3(dotMask), float3(1.7), float3(0.3));
+
+    } else if (A_07_MASK_TYPE < 3.5) {
+        // Type 3: Consumer RGB Shadow Mask (late 90s/early 2000s CRT TV)
+        // Panasonic TX, JVC AV, Philips 4:3 and early widescreen flat-face tubes.
+        float col      = floor(mC.x / 3.0);           // which triad column
+        float subpix   = mod(mC.x, 3.0);              // 0,1,2 within triad
+        float rowShift = mod(col, 2.0) * 0.5;         // hex stagger: every other column shifts down 0.5
+
+        // Fractional position within the dot cell, with stagger applied on Y
+        float2 dotCell = float2(fract(mC.x / 3.0) * 3.0 - 1.5,
+                                fract(mC.y + rowShift) * 2.0 - 1.0);
+
+        // Elliptical phosphor dot: wider than tall to simulate real triad shape
+        float dotR = length(dotCell * float2(0.55, 0.75));
+        float dot  = smoothstep(0.85, 0.55, dotR);    // soft phosphor bloom edge
+
+        // Colour assignment per sub-pixel within the triad
+        float3 triColor;
+        if      (subpix < 1.0) triColor = float3(1.0, 0.0, 0.0);
+        else if (subpix < 2.0) triColor = float3(0.0, 1.0, 0.0);
+        else                   triColor = float3(0.0, 0.0, 1.0);
+
+        // Dark gap between dots contributes a small ambient bleed (phosphor glow)
+        float3 bleed = float3(0.08, 0.08, 0.08);
+        msk = lerp(bleed, triColor * 1.75 + bleed, dot);
+
+    } else {
+        // Type 4: Hi-Bandwidth Slot Mask (late 90s high-end / widescreen TV)
+        // intervals. This is the canonical look of Sony KV-series, Toshiba and
+        // early 16:9 flat-face tubes: clean colour separation with visible
+        float stripe = mod(mC.x, 3.0);
+        float3 stripeColor;
+        if      (stripe < 1.0) stripeColor = float3(1.75, 0.15, 0.15);
+        else if (stripe < 2.0) stripeColor = float3(0.15, 1.75, 0.15);
+        else                   stripeColor = float3(0.15, 0.15, 1.75);
+
+        // Soft stripe edge — a narrow anti-aliased border between colour bands
+        float stripeEdge = fract(mC.x / 3.0) * 3.0; // 0..3 within triad
+        float edgeDist   = min(stripeEdge, 3.0 - stripeEdge); // 0 at border, 1.5 at centre
+        float stripeSoft = smoothstep(0.0, 0.25, edgeDist);   // AA the colour boundary
+
+        // Horizontal bridges — repeat every ~4 pixels of screen height.
+        // The bridge is a hard dark band covering ~20% of each slot period.
+        float bridgePeriod = 4.0;                               // pixels between bridges
+        float bridgePhase  = fract(mC.y / bridgePeriod);
+        float bridge       = smoothstep(0.0, 0.06, bridgePhase) *
+                             smoothstep(1.0, 0.94, bridgePhase); // 0 in bridge, 1 in open slot
+
+        // Combine: colour stripe × bridge openness, with a dark-gap floor
+        float3 slotOpen = stripeColor * stripeSoft;
+        msk = lerp(float3(0.05), slotOpen, bridge);
+    }
+
+    //_______________________________________________________________________
+    // 11. FINAL COMPOSITION
+    //_______________________________________________________________________
+    float3 final = tex * lerp(float3(1.0), msk, A_09_PATTERN_STR) * scanline * A_27_INTENS;
+
+    // Ambient glow
+    float glowFade = 1.0 - distSq;           // tubeOffset already computed; distSq = dot(tubeOffset,tubeOffset)
+    final += tex * (A_25_GLOW * 0.4 * luma * glowFade);
+
+    if (M_MISC > 0.5) {
+        if (M_07_SCATTER > 0.0)
+            final += luma * (0.1 * M_07_SCATTER) * float3(0.8, 0.9, 1.0);
+
+        if (M_02_RAINBOW > 0.0)
+            final.rb += sin(fma(tubeUV.x * res.x, 0.5, time)) * (0.1 * M_02_RAINBOW) * (1.0 - luma);
+
+        // Precompute two hashes together; might be cheaper?
+        float noiseHash   = hash(tubeUV + time);
+        float flickerHash = hash(float2(time, 0.0));
+
+        final *= fma(noiseHash - 0.5, A_19_NOISE, 1.0);
+        final *= fma(-flickerHash * 0.05, M_13_FLICKER, 1.0);
+
+        float vignette = pow(length(tubeOffset) * 1.4, 2.5);
+        final *= fma(-vignette, M_12_VIGNETTE, 1.0);
+
+        if (M_06_SNOW > 0.0) {
+            float fullSnow  = hash(tubeUV + time);
+            float rollingHum = sin(fma(tubeUV.y, 10.0, time * 5.0)) * 0.1;
+            final += fma(float3(fullSnow + rollingHum), float3(M_06_SNOW * 0.4), float3(0.0));
+        }
+    }
+
+    // A_15_HALATION – Game Frame option, always active (not gated on M_MISC)
+    if (A_15_HALATION > 0.0) {
+        float halationFade = smoothstep(0.5, 0.2, length(tubeOffset));
+        final += luma * (0.15 * A_15_HALATION) * float3(1.0, 0.9, 0.75) * halationFade;
+    }
+
+    // A_16_OVERDRIVE – White bloom: bright pixels that exceed 1.0 in any channel
+    // bleed as a warm white halo, simulating electron beam overdrive on a CRT.
+    if (A_16_OVERDRIVE > 0.0) {
+        // How far above 0.75 the pixel luma is — only the brightest pixels fire
+        float overdriveAmt = smoothstep(0.75, 1.0, luma) * A_16_OVERDRIVE;
+        float overFade     = smoothstep(0.5, 0.1, length(tubeOffset));
+        final += overdriveAmt * float3(1.0, 0.98, 0.92) * 0.5 * overFade;
+    }
+
+    //_______________________________________________________________________
+    // 12. TUBE GLASS REFLECTIONS & BEZEL SHADOW
+    //_______________________________________________________________________
+    if (T_TUBEGLASS > 0.5) {
+        float spec = 0.0;
+
+        // In 4:3 mode remap reflUV so the reflection anchors sit relative to
+        // the narrower game window rather than the full 16:9 screen.
+        float2 reflBase = warpedUV;
+        if (A_00_FORCE_43 > 0.5) {
+            float activeWidth  = (4.0 / 3.0) / (16.0 / 9.0);
+            float pillarMargin = (1.0 - activeWidth) * 0.5;
+            reflBase.x = (reflBase.x - pillarMargin) / activeWidth;
+        }
+        float2 reflUV = reflBase - float2(T_05_POS_X, T_06_POS_Y);
+
+        if (T_03_R_TYPE < 0.5) {
+            // Diffuse spot – offset the hardcoded anchor by reflUV
+            float2 reflectPos = reflUV - float2(0.18, 0.22);
+            spec = smoothstep(0.45, 0.0, length(reflectPos * float2(1.0, 0.8)));
+        } else if (T_03_R_TYPE < 1.5) {
+            // Vertical bar – anchor and axis test both shifted
+            float dist = distance(reflUV, float2(0.25, 0.5));
+            float vert = smoothstep(0.02, 0.06, abs(reflUV.x - 0.25));
+            spec = smoothstep(0.55, 0.0, dist) * vert;
+        } else {
+            // Horizontal bar – row and column anchors both shifted
+            float horiz = smoothstep(0.28, 0.0, abs(reflUV.y - 0.15));
+            float width = smoothstep(0.55, 0.0, abs(reflUV.x - 0.5));
+            spec = horiz * width;
+        }
+
+        if (T_04_WEAR > 0.0)
+            spec *= fma(-hash(tubeUV * 15.0), T_04_WEAR, 1.0);
+
+        float3 reflectColor = float3(0.9, 0.95, 1.0);
+        final += (spec * T_02_SHINE * fma(-luma, 0.5, 1.1) * reflectColor) * step(d_game, 0.0);
+
+        // T_07_TINT / T_08_TINT_STR – Inner glass faceplate tint.
+        // Most late-90s/2000s CRT TVs had an anti-glare coating baked into the
+        // glass that gave the screen a visible tint when off. Grey was most common
+        // (reduced reflections), green was used on cheaper sets, blue/dark.
+        if (T_08_TINT_STR > 0.0) {
+            float3 tintColor;
+            if      (T_07_TINT < 0.5) tintColor = float3(1.0, 1.0, 1.0);           // 0: None (no-op)
+            else if (T_07_TINT < 1.5) tintColor = float3(0.88, 0.90, 0.88);        // 1: Grey/neutral anti-glare
+            else if (T_07_TINT < 2.5) tintColor = float3(0.85, 0.92, 0.84);        // 2: Green tint (budget CRTs)
+            else                       tintColor = float3(0.84, 0.88, 0.95);        // 3: Blue-grey (flat-face/Trinitron)
+            final *= lerp(float3(1.0), tintColor, T_08_TINT_STR);
+        }
+
+        // T_09_DUST – Screen surface dust and smudge layer.
+        // Uses bilinear value noise
+        if (T_09_DUST > 0.0) {
+            // --- Smooth value noise helper (inlined for both octaves) ---
+            // Coarse octave — scale UV to ~8 cells across the screen
+            float2 uvC    = warpedUV * 8.0;
+            float2 iC     = floor(uvC);
+            float2 fC     = fract(uvC);
+            float2 sC     = fC * fC * (3.0 - 2.0 * fC);   // smoothstep curve
+            float  c00    = hash(iC + float2(0.0, 0.0));
+            float  c10    = hash(iC + float2(1.0, 0.0));
+            float  c01    = hash(iC + float2(0.0, 1.0));
+            float  c11    = hash(iC + float2(1.0, 1.0));
+            float  smudge = lerp(lerp(c00, c10, sC.x), lerp(c01, c11, sC.x), sC.y);
+            smudge = smudge - 0.5;   // centred ~[-0.5, 0.5]
+
+            // Fine octave — scale UV to ~40 cells, same interpolation
+            float2 uvF  = warpedUV * 40.0;
+            float2 iF   = floor(uvF);
+            float2 fF   = fract(uvF);
+            float2 sF   = fF * fF * (3.0 - 2.0 * fF);
+            float  f00  = hash(iF + float2(0.0, 0.0));
+            float  f10  = hash(iF + float2(1.0, 0.0));
+            float  f01  = hash(iF + float2(0.0, 1.0));
+            float  f11  = hash(iF + float2(1.0, 1.0));
+            float  fine = lerp(lerp(f00, f10, sF.x), lerp(f01, f11, sF.x), sF.y);
+            fine = fine - 0.5;
+
+            // Blend: coarse smudge dominates, fine adds surface texture
+            float dustLayer = smudge * 0.72 + fine * 0.28;
+
+            // Warm chromatic tint — skin oils and dust scatter R > G > B
+            float3 dustColor = float3(1.0 + dustLayer * 0.18,
+                                      1.0 + dustLayer * 0.14,
+                                      1.0 + dustLayer * 0.07);
+            final *= lerp(float3(1.0), dustColor, T_09_DUST);
+        }
+    }
+
+    if (B_BEZEL > 0.5) {
+        float shadow = smoothstep(-0.05, 0.0, d_game);
+        final *= fma(-shadow * B_05_BEZEL_SHADOW, 0.8, 1.0);
+    }
+
+    // ── Composite embedded bezel image ──────────────────────────────────────
+    // Paste your generated .glsl.inc contents above main() to activate this.
+    // See BEZEL_IMAGE_EMBEDDING_GUIDE.txt for full instructions.
+    #ifdef BEZEL_W
+        float4 bezelImg = sampleBezelBilinear(uv_raw);
+        if (bezelImg.a > 0.02) {
+            SetOutput(float4(lerp(max(final, 0.0), bezelImg.rgb, bezelImg.a), 1.0));
+            return;
+        }
+    #endif
+
+    SetOutput(float4(max(final, 0.0), 1.0));
+}
