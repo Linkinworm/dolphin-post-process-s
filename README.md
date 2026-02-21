@@ -21,5 +21,5 @@ this is mainly limited to option 16,19 and 20 though.(in that order)
 Also works on the android version, should my commit changes get merged into the master branch at some point! :D
 
 ______________________________________________
-LinkinCRTfinal_bezelless is the same as the lastest version except it has some thing includes a full bezel image! madness right. You can replace the code using [this](https://github.com/Linkinworm/glsl-image-embed-generation)
+[LinkinCRTfinal_bezelless.glsl](https://github.com/Linkinworm/dolphin-post-process-s/blob/main/LinkinCRTfinal_bezelless.glsl) is the same as the lastest version except it has some thing includes a full bezel image! madness right. You can replace the code using [this](https://github.com/Linkinworm/glsl-image-embed-generation)
 theres a huge block of code to replace near the top but that should be all you need to replace. note that I didnt't optimise this so it looks jank currently because the image is overlayed ontop of the gameframe so i dont recommend it, but feel free to test since this is experimental for a glsl shader.
