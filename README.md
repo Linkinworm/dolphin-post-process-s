@@ -1,7 +1,7 @@
 
 ![zel22](https://github.com/user-attachments/assets/ae15889a-a25e-424c-b4eb-41f97778c40b)
 
-LinkinCRTfinal_vulkanONLY_bezel.glsl.glsl is the latest version
+[LinkinCRTfinal_vulkanONLY_bezel.glsl](https://github.com/Linkinworm/dolphin-post-process-s/blob/main/LinkinCRTfinal_bezelless.glsl) is the latest version
 ^ This is optimised for vulkan. but seems to work with OGL <(this is not fully tested though since I feel vulkan is just better)>
 DX11 and DX12 seem to just be fully broken, glitchy effects in this case possibly use an older version. Again i'm not working for DirectX or OGL compatibility as I want to try maintain some performance due to how many effects you can layer (all 70 if you really wanted to).
 
