@@ -1,7 +1,7 @@
 
 ![zel22](https://github.com/user-attachments/assets/ae15889a-a25e-424c-b4eb-41f97778c40b)
 
-LinkinCRTfinal_vulkanONLY.glsl is the latest version
+LinkinCRTfinal_vulkanONLY_bezel.glsl.glsl is the latest version
 ^ This is optimised for vulkan. but seems to work with OGL <(this is not fully tested though since I feel vulkan is just better)>
 DX11 and DX12 seem to just be fully broken, glitchy effects in this case possibly use an older version. Again i'm not working for DirectX or OGL compatibility as I want to try maintain some performance due to how many effects you can layer (all 70 if you really wanted to).
 
@@ -16,3 +16,7 @@ Everything should be self explanitory. options are ordered in how they stack on 
 this is mainly limited to option 16,19 and 20 though.(in that order)
 
 Also works on the android version, should my commit changes get merged into the master branch at some point! :D
+
+
+LinkinCRTfinal_bezelless is the same as the lastest version except it has some thing includes a full bezel image! madness right. You can replace the code using [this](https://github.com/Linkinworm/glsl-image-embed-generation)
+theres a huge block of code to replace near the top but that should be all you need to replace. note that I didnt't optimise this so it looks jank currently because the image is overlayed ontop of the gameframe so i dont recommend it, but feel free to test since this is experimental for a glsl shader.
